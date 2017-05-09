@@ -35,7 +35,8 @@ public class TilesController : MonoBehaviour {
         currentGenerationData = parameters;
         //create the 2d arrays
         tilesArray = new BasicTile[currentGenerationData.sizeWidth, currentGenerationData.sizeLength];
-        
+        //generate a guarranteed path
+        GeneratePossiblePath(currentGenerationData);
 
         //generation the tiles
         float totalWeight = 0;
@@ -50,7 +51,7 @@ public class TilesController : MonoBehaviour {
             {
                 GameObject newTile = InstantiateRandomTileBasedOnData(totalWeight, 
                     Vector3.right*(currentGenerationData.tileWidth*(i + 0.5f))+
-                    Vector3.forward*(currentGenerationData.tileLength*(j + 0.5f)));
+                    Vector3.forward*(currentGenerationData.tileLength*(j + 0.5f)), !path[i,j]);
 
                 tilesArray[i, j] = newTile.GetComponent<BasicTile>();
             }
@@ -95,27 +96,59 @@ public class TilesController : MonoBehaviour {
 
         int place = Random.Range(0, currentGenerationData.sizeWidth);
         int prevPlace = place;
+        path[place, currentGenerationData.sizeLength - 1] = true;
+        bool toggle = true;
         for (int i = currentGenerationData.sizeLength-2; i >= 0; --i)
         {
-            int place = Random.Range(0, currentGenerationData.sizeWidth);
+            if (toggle)
+            {
+                toggle = false;
+                path[prevPlace, i] = true;
+            }
+            else
+            {
+                toggle = true;
+                place = Random.Range(0, currentGenerationData.sizeWidth);
+                for (int j = Mathf.Min(place, prevPlace); j <= Mathf.Max(place,prevPlace); ++j)
+                {
+                    path[j, i] = true;
+                }
+            }
         }
     }
 
 
-    private GameObject InstantiateRandomTileBasedOnData(float totalWeight, Vector3 position)
+    private GameObject InstantiateRandomTileBasedOnData(float totalWeight, Vector3 position, bool allowBlock = true)
     {
-        float num = Random.Range(0, totalWeight);
-        float currentWeight = 0;
-        foreach(var i in currentGenerationData.tileItems)
+        GameObject result = null;
+        bool whetherContinie = true;
+        while (whetherContinie)
         {
-            currentWeight += i.tileWeight;
-            if(currentWeight >= num)
+            float num = Random.Range(0, totalWeight);
+            float currentWeight = 0;
+            foreach (var i in currentGenerationData.tileItems)
             {
-                return GameObject.Instantiate(i.tilePref, position, Quaternion.identity,this.transform);
+                currentWeight += i.tileWeight;
+                if (currentWeight >= num)
+                {
+                    result = Instantiate(i.tilePref, position, Quaternion.identity, this.transform);
+                    if(allowBlock = false && result.GetComponent<BasicTile>().canStandOn == false)
+                    {
+                        //not allow blocked tile ant it is a block tile. Redo the generation
+                        Destroy(result);
+                        whetherContinie = true;
+                        break;
+                    }
+                    else
+                    {
+                        whetherContinie = false;
+                        break;
+                    }
+                }
             }
         }
 
-        return null;
+        return result;
     }
 
 

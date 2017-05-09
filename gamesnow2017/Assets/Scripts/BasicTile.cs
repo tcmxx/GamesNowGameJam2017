@@ -7,8 +7,9 @@ public class BasicTile : MonoBehaviour {
 
     //whether this object can be standed on. used for the map generator to put objects
     public bool canStandOn = true;
-
+    public string wwiseSwitch;
     public StageBasedParamter[] stageBasedParamters;
+
 
     [System.Serializable]
     public struct StageBasedParamter
@@ -33,6 +34,8 @@ public class BasicTile : MonoBehaviour {
         StageBasedParamter param = FindStageBasedParamters(charactor.currentStage);
         charactor.BasicCharactor.acceleration += param.accelerationOffset;
         charactor.BasicCharactor.deceleration += param.decelerationOffset;
+        if(!wwiseSwitch.Equals(""))
+            AkSoundEngine.SetSwitch("material", wwiseSwitch, charactor.gameObject);
     }
 
     public virtual void OnExitTile(CharacterControl charactor)
