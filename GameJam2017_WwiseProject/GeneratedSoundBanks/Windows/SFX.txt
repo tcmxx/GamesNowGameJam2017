@@ -8,8 +8,10 @@ Switch	ID	Name	Switch Group			Notes
 	803837735	sand	material			
 	841620460	concrete	material			
 	1289942167	stairs	material			
+	2654748154	water	material			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	32496816	SFX_FS_Water_01	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Water_01_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Water\SFX_FS_Water_01		75340
 	57606575	SFX_FS_Concrete_07	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_07_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_07		62624
 	105205498	SFX_FS_Concrete_05	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_05_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_05		65948
 	131470487	SFX_FS_Concrete_02	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_02_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_02		60256
@@ -22,8 +24,12 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	353389715	SFX_FS_Sand_01	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_01_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_01		114280
 	390757680	SFX_FS_Concrete_04	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_04_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_04		59360
 	444752991	SFX_FS_Sand_04	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_04_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_04		97724
+	452324945	SFX_FS_Water_04	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Water_04_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Water\SFX_FS_Water_04		69228
 	497367763	SFX_FS_Sand_02	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_02_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_02		94416
 	555535313	SFX_FS_Concrete_01	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_01_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_01		68620
+	623495334	SFX_FS_Water_03	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Water_03_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Water\SFX_FS_Water_03		71544
+	625260691	SFX_FS_Water_05	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Water_05_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Water\SFX_FS_Water_05		61420
+	939148684	SFX_FS_Water_02	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Water_02_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Water\SFX_FS_Water_02		83564
 	954046450	SFX_FS_Sand_03	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_03_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_03		106516
 	1052558988	SFX_FS_Concrete_08	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_08_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_08		65040
 

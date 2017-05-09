@@ -19,6 +19,10 @@
 				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="32496816" Language="SFX">
+					<ShortName>SFX_FS_Water_01.wav</ShortName>
+					<Path>SFX\SFX_FS_Water_01_9E69E797.wem</Path>
+				</File>
 				<File Id="57606575" Language="SFX">
 					<ShortName>SFX_FS_Concrete_07.wav</ShortName>
 					<Path>SFX\SFX_FS_Concrete_07_9E69E797.wem</Path>
@@ -67,6 +71,10 @@
 					<ShortName>SFX_FS_Sand_04.wav</ShortName>
 					<Path>SFX\SFX_FS_Sand_04_9E69E797.wem</Path>
 				</File>
+				<File Id="452324945" Language="SFX">
+					<ShortName>SFX_FS_Water_04.wav</ShortName>
+					<Path>SFX\SFX_FS_Water_04_9E69E797.wem</Path>
+				</File>
 				<File Id="497367763" Language="SFX">
 					<ShortName>SFX_FS_Sand_02.wav</ShortName>
 					<Path>SFX\SFX_FS_Sand_02_9E69E797.wem</Path>
@@ -74,6 +82,18 @@
 				<File Id="555535313" Language="SFX">
 					<ShortName>SFX_FS_Concrete_01.wav</ShortName>
 					<Path>SFX\SFX_FS_Concrete_01_9E69E797.wem</Path>
+				</File>
+				<File Id="623495334" Language="SFX">
+					<ShortName>SFX_FS_Water_03.wav</ShortName>
+					<Path>SFX\SFX_FS_Water_03_9E69E797.wem</Path>
+				</File>
+				<File Id="625260691" Language="SFX">
+					<ShortName>SFX_FS_Water_05.wav</ShortName>
+					<Path>SFX\SFX_FS_Water_05_9E69E797.wem</Path>
+				</File>
+				<File Id="939148684" Language="SFX">
+					<ShortName>SFX_FS_Water_02.wav</ShortName>
+					<Path>SFX\SFX_FS_Water_02_9E69E797.wem</Path>
 				</File>
 				<File Id="954046450" Language="SFX">
 					<ShortName>SFX_FS_Sand_03.wav</ShortName>
