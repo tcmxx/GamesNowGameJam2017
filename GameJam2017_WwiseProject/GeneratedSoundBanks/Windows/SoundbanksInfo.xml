@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="120">
+	<RootPaths>
+		<ProjectRoot>C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="393239870" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
+			<ShortName>SFX</ShortName>
+			<Path>SFX.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="57606575" Language="SFX">
+					<ShortName>SFX_FS_Concrete_07.wav</ShortName>
+					<Path>SFX\SFX_FS_Concrete_07_E95633E1.wem</Path>
+				</File>
+				<File Id="105205498" Language="SFX">
+					<ShortName>SFX_FS_Concrete_05.wav</ShortName>
+					<Path>SFX\SFX_FS_Concrete_05_E95633E1.wem</Path>
+				</File>
+				<File Id="131470487" Language="SFX">
+					<ShortName>SFX_FS_Concrete_02.wav</ShortName>
+					<Path>SFX\SFX_FS_Concrete_02_E95633E1.wem</Path>
+				</File>
+				<File Id="133244832" Language="SFX">
+					<ShortName>SFX_FS_Sand_07.wav</ShortName>
+					<Path>SFX\SFX_FS_Sand_07_E95633E1.wem</Path>
+				</File>
+				<File Id="178173017" Language="SFX">
+					<ShortName>SFX_FS_Sand_08.wav</ShortName>
+					<Path>SFX\SFX_FS_Sand_08_E95633E1.wem</Path>
+				</File>
+				<File Id="237263475" Language="SFX">
+					<ShortName>SFX_FS_Sand_06.wav</ShortName>
+					<Path>SFX\SFX_FS_Sand_06_E95633E1.wem</Path>
+				</File>
+				<File Id="245981826" Language="SFX">
+					<ShortName>SFX_FS_Concrete_03.wav</ShortName>
+					<Path>SFX\SFX_FS_Concrete_03_E95633E1.wem</Path>
+				</File>
+				<File Id="274749242" Language="SFX">
+					<ShortName>SFX_FS_Sand_05.wav</ShortName>
+					<Path>SFX\SFX_FS_Sand_05_E95633E1.wem</Path>
+				</File>
+				<File Id="297819900" Language="SFX">
+					<ShortName>SFX_FS_Concrete_06.wav</ShortName>
+					<Path>SFX\SFX_FS_Concrete_06_E95633E1.wem</Path>
+				</File>
+				<File Id="353389715" Language="SFX">
+					<ShortName>SFX_FS_Sand_01.wav</ShortName>
+					<Path>SFX\SFX_FS_Sand_01_E95633E1.wem</Path>
+				</File>
+				<File Id="390757680" Language="SFX">
+					<ShortName>SFX_FS_Concrete_04.wav</ShortName>
+					<Path>SFX\SFX_FS_Concrete_04_E95633E1.wem</Path>
+				</File>
+				<File Id="444752991" Language="SFX">
+					<ShortName>SFX_FS_Sand_04.wav</ShortName>
+					<Path>SFX\SFX_FS_Sand_04_E95633E1.wem</Path>
+				</File>
+				<File Id="497367763" Language="SFX">
+					<ShortName>SFX_FS_Sand_02.wav</ShortName>
+					<Path>SFX\SFX_FS_Sand_02_E95633E1.wem</Path>
+				</File>
+				<File Id="555535313" Language="SFX">
+					<ShortName>SFX_FS_Concrete_01.wav</ShortName>
+					<Path>SFX\SFX_FS_Concrete_01_E95633E1.wem</Path>
+				</File>
+				<File Id="954046450" Language="SFX">
+					<ShortName>SFX_FS_Sand_03.wav</ShortName>
+					<Path>SFX\SFX_FS_Sand_03_E95633E1.wem</Path>
+				</File>
+				<File Id="1052558988" Language="SFX">
+					<ShortName>SFX_FS_Concrete_08.wav</ShortName>
+					<Path>SFX\SFX_FS_Concrete_08_E95633E1.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
