@@ -21,6 +21,7 @@ public class BasicTile : MonoBehaviour {
         public float decelerationOffset;
     }
 
+    protected CharacterControl inTileCharacter;
 
     public void Update()
     {
@@ -31,6 +32,7 @@ public class BasicTile : MonoBehaviour {
     public virtual void OnEnterTile(CharacterControl charactor)
     {
         Debug.Log("Enter Tile: " + gameObject.name);
+        inTileCharacter = charactor;
         StageBasedParamter param = FindStageBasedParamters(charactor.CurrentStage);
         charactor.BasicCharactor.acceleration += param.accelerationOffset;
         charactor.BasicCharactor.deceleration += param.decelerationOffset;
@@ -38,11 +40,14 @@ public class BasicTile : MonoBehaviour {
         {
             AkSoundEngine.SetSwitch("material", wwiseSwitch, charactor.gameObject);
         }
+
+
     }
 
     public virtual void OnExitTile(CharacterControl charactor)
     {
         Debug.Log("Exit Tile: " + gameObject.name);
+        inTileCharacter = null;
         StageBasedParamter param = FindStageBasedParamters(charactor.CurrentStage);
         charactor.BasicCharactor.acceleration -= param.accelerationOffset;
         charactor.BasicCharactor.deceleration -= param.decelerationOffset;
@@ -54,7 +59,14 @@ public class BasicTile : MonoBehaviour {
         return inSpeed* param.speedMultiplier + param.speedOffset;
     }
 
+    public virtual void OnCharacterCollisionEnter(CharacterControl charactor)
+    {
 
+    }
+    public virtual void OnCharacterCollisionExit(CharacterControl charactor)
+    {
+
+    }
     public StageBasedParamter FindStageBasedParamters(AgeStage stage)
     {
         foreach(var p in stageBasedParamters)
@@ -72,4 +84,20 @@ public class BasicTile : MonoBehaviour {
     }
 
 
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            OnCharacterCollisionEnter(other.GetComponent<CharacterControl>());
+            Debug.Log("Player Trigger Enter:" + gameObject.name);
+        }
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            OnCharacterCollisionExit(other.GetComponent<CharacterControl>());
+            Debug.Log("Player Trigger Exit:" + gameObject.name);
+        }
+    }
 }

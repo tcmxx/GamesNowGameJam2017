@@ -8,9 +8,6 @@ public class CharacterControl : MonoBehaviour {
 
     public static CharacterControl mainCharacter;
 
-    
-
-
     public float CurrentAge {
         get { return currentAge; }
         set { currentAge = value; CurrentStage = CharacterPresets.characterPresets.CheckStageForAge(currentAge); }
@@ -21,12 +18,17 @@ public class CharacterControl : MonoBehaviour {
     public AgeStage CurrentStage { get; private set; }
     
     public float maxSpeed;
-    
+
+
+
     private float horizontalInput;
     private float verticalInput;
 
     public CharactorMovement BasicCharactor { get; set; }
     public BasicTile CurrentTile { get; set; }
+
+
+
 
 
     private void Awake()
@@ -38,13 +40,19 @@ public class CharacterControl : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        
+        CheckCurrentTile();
+        AkSoundEngine.SetSwitch("material", CurrentTile.wwiseSwitch, gameObject);
     }
 	// Update is called once per frame
 	void Update () {
 
         UpdateAging();
-        ApplyMovement();
+
+        if (BasicCharactor.Status == CharactorMovement.CharacterStatus.Idling || BasicCharactor.Status == CharactorMovement.CharacterStatus.Running)
+        {
+            ApplyMovement();
+        }
+
         CheckCurrentTile();
     }
 
@@ -122,6 +130,17 @@ public class CharacterControl : MonoBehaviour {
         MoveVertical(0);
         ApplyMovement();
         enabled = false;
+    }
+
+
+    public void StartJumping()
+    {
+        BasicCharactor.StartJumping();
+    }
+
+    public void EndJumping()
+    {
+        BasicCharactor.EndJumping();
     }
 
 

@@ -10,6 +10,8 @@ public class CharactorMovement : MonoBehaviour {
     public float acceleration = 1.0f;
     public float deceleration = 1.0f;
 
+    public float jumpingSpeed = 1.0f;
+
     public Transform modelTransform;
     public Animator animator;
 
@@ -17,7 +19,16 @@ public class CharactorMovement : MonoBehaviour {
     private Vector3 desiredVelocity;
 
     private CharacterController characterController;
-    private Vector3 currentVelocity = Vector3.zero;
+    public Vector3 CurrentVelocity { get; set; }
+
+
+    public enum CharacterStatus
+    {
+        Idling, Running, Jumping
+    }
+    public CharacterStatus Status { get; private set; }
+
+
 
     private void Awake()
     {
@@ -35,33 +46,45 @@ public class CharactorMovement : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        if(Status == CharacterStatus.Idling || Status == CharacterStatus.Running)
+        {
+            UpdateRunning();
+        }else if(Status == CharacterStatus.Jumping)
+        {
+            UpdateJumping();
+        }
 
+    }
+
+    private void UpdateRunning()
+    {
         //update the velocity
         Vector3 desiredSpeedTangent = desiredVelocity.normalized;
         if (desiredVelocity.magnitude <= 0.01f)
         {
-            desiredSpeedTangent = currentVelocity.normalized;
+            desiredSpeedTangent = CurrentVelocity.normalized;
         }
-        float speedTangent = Vector3.Dot(currentVelocity, desiredSpeedTangent);
+        float speedTangent = Vector3.Dot(CurrentVelocity, desiredSpeedTangent);
         float speedTangentDiff = speedTangent - desiredVelocity.magnitude;
-        Vector3 vNormal = currentVelocity - speedTangent * desiredSpeedTangent;
+        Vector3 vNormal = CurrentVelocity - speedTangent * desiredSpeedTangent;
 
         //deceleration part
 
 
-        if(speedTangent < 0 || speedTangentDiff > 0 || desiredVelocity.magnitude <= 0.01f)
+        if (speedTangent < 0 || speedTangentDiff > 0 || desiredVelocity.magnitude <= 0.01f)
         {
             //deceleration all direction
-            float magnitude = currentVelocity.magnitude - deceleration * Time.fixedDeltaTime;
-            if(magnitude <= 0)
+            float magnitude = CurrentVelocity.magnitude - deceleration * Time.fixedDeltaTime;
+            if (magnitude <= 0)
             {
                 magnitude = 0;
-            }else if(speedTangentDiff > 0 && magnitude < desiredVelocity.magnitude)
+            }
+            else if (speedTangentDiff > 0 && magnitude < desiredVelocity.magnitude)
             {
                 magnitude = desiredVelocity.magnitude;
             }
 
-            currentVelocity = currentVelocity.normalized * magnitude;
+            CurrentVelocity = CurrentVelocity.normalized * magnitude;
         }
         else
         {
@@ -71,43 +94,66 @@ public class CharactorMovement : MonoBehaviour {
             {
                 magnitude = 0;
             }
-            currentVelocity = speedTangent* desiredVelocity.normalized + vNormal.normalized * magnitude;
+            CurrentVelocity = speedTangent * desiredVelocity.normalized + vNormal.normalized * magnitude;
         }
 
         //acceleration part
         //get new velocity after deceleration
         desiredSpeedTangent = desiredVelocity.normalized;
-        if(desiredVelocity.magnitude <=0.01f)
+        if (desiredVelocity.magnitude <= 0.01f)
         {
-            desiredSpeedTangent = currentVelocity.normalized;
+            desiredSpeedTangent = CurrentVelocity.normalized;
         }
-        speedTangent = Vector3.Dot(currentVelocity, desiredSpeedTangent);
+        speedTangent = Vector3.Dot(CurrentVelocity, desiredSpeedTangent);
         speedTangentDiff = speedTangent - desiredVelocity.magnitude;
-        vNormal = currentVelocity - speedTangent * desiredSpeedTangent;
-        
-        speedTangentDiff += Time.fixedDeltaTime * acceleration * ( speedTangentDiff > 0?-1:1);
-        currentVelocity = vNormal + desiredVelocity + speedTangentDiff * desiredSpeedTangent;
+        vNormal = CurrentVelocity - speedTangent * desiredSpeedTangent;
+
+        speedTangentDiff += Time.fixedDeltaTime * acceleration * (speedTangentDiff > 0 ? -1 : 1);
+        CurrentVelocity = vNormal + desiredVelocity + speedTangentDiff * desiredSpeedTangent;
 
         //assign the rigidbody velocity
-        characterController.SimpleMove(currentVelocity);
+        characterController.SimpleMove(CurrentVelocity);
 
         //update the direction
-        Vector3 lookat = currentVelocity;
+        Vector3 lookat = CurrentVelocity;
         lookat.y = 0;
         if (lookat.magnitude > 0.01f)
         {
             modelTransform.localRotation = Quaternion.LookRotation(lookat.normalized, Vector3.up);
             animator.SetBool("Running", true);
-        }else
+            Status = CharacterStatus.Running;
+        }
+        else
         {
             animator.SetBool("Running", false);
+            Status = CharacterStatus.Idling;
         }
     }
 
+    private void UpdateJumping()
+    {
+        transform.position += Time.fixedDeltaTime * CurrentVelocity.normalized* jumpingSpeed;
+        
+    }
 
     public void Move(Vector3 direction, float desiredSpeed)
     {
         desiredVelocity = direction.normalized * desiredSpeed;
     }
+
+
+    public void StartJumping()
+    {
+        Status = CharacterStatus.Jumping;
+        animator.SetBool("Jumping", true);
+    }
+
+    public void EndJumping()
+    {
+        Status = CharacterStatus.Idling;
+        animator.SetBool("Jumping", false);
+    }
+
+
 
 }

@@ -79,7 +79,9 @@ public class GameController : MonoBehaviour {
         CharacterControl prevCharacter = CharacterControl.mainCharacter;
 
         GameObject newCharacter = Instantiate(CharacterPresets.characterPresets.GetCharacterPref(newAge), prevCharacter.transform.position, prevCharacter.transform.rotation);
-        newCharacter.GetComponent<CharacterControl>().CurrentAge = SavedAge;
+        CharacterControl newControl = newCharacter.GetComponent<CharacterControl>();
+        newControl.CurrentAge = SavedAge;
+        newControl.BasicCharactor.CurrentVelocity = prevCharacter.BasicCharactor.CurrentVelocity;
         Destroy(prevCharacter.gameObject);
 
         Debug.Log("Character Changed");
