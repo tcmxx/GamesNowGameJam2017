@@ -7,14 +7,14 @@ public class BasicTile : MonoBehaviour {
 
     //whether this object can be standed on. used for the map generator to put objects
     public bool canStandOn = true;
-    public string wwiseSwitch;
+    public string wwiseSwitch = "";
     public StageBasedParamter[] stageBasedParamters;
 
 
     [System.Serializable]
     public struct StageBasedParamter
     {
-        public CharacterControl.AgeStage stage;
+        public AgeStage stage;
         public float speedOffset;
         public float speedMultiplier;
         public float accelerationOffset;
@@ -31,29 +31,31 @@ public class BasicTile : MonoBehaviour {
     public virtual void OnEnterTile(CharacterControl charactor)
     {
         Debug.Log("Enter Tile: " + gameObject.name);
-        StageBasedParamter param = FindStageBasedParamters(charactor.currentStage);
+        StageBasedParamter param = FindStageBasedParamters(charactor.CurrentStage);
         charactor.BasicCharactor.acceleration += param.accelerationOffset;
         charactor.BasicCharactor.deceleration += param.decelerationOffset;
-        if(!wwiseSwitch.Equals(""))
+        if (wwiseSwitch != "")
+        {
             AkSoundEngine.SetSwitch("material", wwiseSwitch, charactor.gameObject);
+        }
     }
 
     public virtual void OnExitTile(CharacterControl charactor)
     {
         Debug.Log("Exit Tile: " + gameObject.name);
-        StageBasedParamter param = FindStageBasedParamters(charactor.currentStage);
+        StageBasedParamter param = FindStageBasedParamters(charactor.CurrentStage);
         charactor.BasicCharactor.acceleration -= param.accelerationOffset;
         charactor.BasicCharactor.deceleration -= param.decelerationOffset;
     }
 
     public virtual float ModifySpeed(float inSpeed, CharacterControl charactor)
     {
-        StageBasedParamter param = FindStageBasedParamters(charactor.currentStage);
+        StageBasedParamter param = FindStageBasedParamters(charactor.CurrentStage);
         return inSpeed* param.speedMultiplier + param.speedOffset;
     }
 
 
-    public StageBasedParamter FindStageBasedParamters(CharacterControl.AgeStage stage)
+    public StageBasedParamter FindStageBasedParamters(AgeStage stage)
     {
         foreach(var p in stageBasedParamters)
         {

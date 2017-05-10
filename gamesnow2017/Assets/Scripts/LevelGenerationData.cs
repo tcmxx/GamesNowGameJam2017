@@ -26,4 +26,10 @@ public class LevelGenerationData : MonoBehaviour {
     {
         levelGenerationData = this;
     }
+
+    public Vector3 GridToWorldPosition(int x, int y)
+    {
+        return Vector3.right * (tileWidth * (x + 0.5f)) +
+                    Vector3.forward * (tileLength * (y + 0.5f));
+    }
 }

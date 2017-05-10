@@ -23,7 +23,7 @@ public class CameraMovement : MonoBehaviour {
     private void FollowPlayer(CharacterControl character)
     {
         Vector3 pos = transform.position;
-        pos.z = character.transform.position.z - 5;
+        pos.z = character.transform.position.z - 3;
 
         transform.position = pos;
     }

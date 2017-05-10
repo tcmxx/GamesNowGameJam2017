@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -32,7 +33,6 @@ public class GameController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        TilesController.tilesController.GenerateTilesData(LevelGenerationData.levelGenerationData);
 	}
 	
 	// Update is called once per frame
@@ -41,8 +41,19 @@ public class GameController : MonoBehaviour {
 	}
 
 
+    public void RestartGame()
+    {
+        SavedAge = 0;
+        SceneManager.LoadScene("Level0");
+    }
+
 
     public void PassLevelLogic()
+    {
+
+    }
+
+    private void InitializeCharacterAndDestination()
     {
 
     }

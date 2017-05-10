@@ -6,13 +6,16 @@ public class TilesController : MonoBehaviour {
 
 
     public GameObject invisibleWallPref;
-
+    public GameObject planeTilePref;
 
     public static TilesController tilesController;
     private BasicTile[,] tilesArray;
     private bool[,] path;
 
     private LevelGenerationData currentGenerationData;
+
+    public Vector3 CharactorStartPosition { get; set; }
+    public Vector3 DestinationPosition { get; set; }
 
     private void Awake()
     {
@@ -49,9 +52,9 @@ public class TilesController : MonoBehaviour {
         {
             for(int j = 0; j < currentGenerationData.sizeLength; ++j)
             {
+                //bool whether
                 GameObject newTile = InstantiateRandomTileBasedOnData(totalWeight, 
-                    Vector3.right*(currentGenerationData.tileWidth*(i + 0.5f))+
-                    Vector3.forward*(currentGenerationData.tileLength*(j + 0.5f)), !path[i,j]);
+                    currentGenerationData.GridToWorldPosition(i,j), !path[i,j]);
 
                 tilesArray[i, j] = newTile.GetComponent<BasicTile>();
             }
@@ -95,6 +98,8 @@ public class TilesController : MonoBehaviour {
 
 
         int place = Random.Range(0, currentGenerationData.sizeWidth);
+        DestinationPosition = currentGenerationData.GridToWorldPosition(place, currentGenerationData.sizeLength - 1);
+
         int prevPlace = place;
         path[place, currentGenerationData.sizeLength - 1] = true;
         bool toggle = true;
@@ -114,39 +119,35 @@ public class TilesController : MonoBehaviour {
                     path[j, i] = true;
                 }
             }
+            prevPlace = place;
         }
+
+        CharactorStartPosition = currentGenerationData.GridToWorldPosition(place, 0);
     }
 
 
     private GameObject InstantiateRandomTileBasedOnData(float totalWeight, Vector3 position, bool allowBlock = true)
     {
         GameObject result = null;
-        bool whetherContinie = true;
-        while (whetherContinie)
+
+        float num = Random.Range(0, totalWeight);
+        float currentWeight = 0;
+        foreach (var i in currentGenerationData.tileItems)
         {
-            float num = Random.Range(0, totalWeight);
-            float currentWeight = 0;
-            foreach (var i in currentGenerationData.tileItems)
+            currentWeight += i.tileWeight;
+            if (currentWeight >= num)
             {
-                currentWeight += i.tileWeight;
-                if (currentWeight >= num)
+                result = Instantiate(i.tilePref, position, Quaternion.identity, this.transform);
+                if (allowBlock == false && result.GetComponent<BasicTile>().canStandOn == false)
                 {
-                    result = Instantiate(i.tilePref, position, Quaternion.identity, this.transform);
-                    if(allowBlock = false && result.GetComponent<BasicTile>().canStandOn == false)
-                    {
-                        //not allow blocked tile ant it is a block tile. Redo the generation
-                        Destroy(result);
-                        whetherContinie = true;
-                        break;
-                    }
-                    else
-                    {
-                        whetherContinie = false;
-                        break;
-                    }
+                    //not allow blocked tile ant it is a block tile.
+                    Destroy(result);
+                    result = Instantiate(planeTilePref, position, Quaternion.identity, this.transform);
                 }
+                break;
             }
         }
+        
 
         return result;
     }

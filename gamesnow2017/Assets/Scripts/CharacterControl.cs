@@ -8,32 +8,22 @@ public class CharacterControl : MonoBehaviour {
 
     public static CharacterControl mainCharacter;
 
-    public enum AgeStage
-    {
-        Kid,
-        Teen,
-        Adult,
-        Old,
-        Death
-    }
-    [System.Serializable]
-    public struct AgeStageSetting
-    {
-        public AgeStage stage;
-        public float maxAge;
-    }
-    public float currentAge;
-    public AgeStage currentStage;
-    public AgeStageSetting[] ageStageSetting;
+    
 
+
+    public float CurrentAge {
+        get { return currentAge; }
+        set { currentAge = value; CurrentStage = CharacterPresets.characterPresets.CheckStageForAge(currentAge); }
+    }
+    [SerializeField]
+    private float currentAge;
+
+    public AgeStage CurrentStage { get; private set; }
+    
     public float ageChangingSpeed = 0.5f;
 
-
-
     public float maxSpeed;
-
-
-
+    
     private float horizontalInput;
     private float verticalInput;
 
@@ -45,10 +35,12 @@ public class CharacterControl : MonoBehaviour {
     {
         BasicCharactor = GetComponent<CharactorMovement>();
         mainCharacter = this;
+        CurrentTile = null;
     }
     // Use this for initialization
     void Start()
     {
+        
     }
 	// Update is called once per frame
 	void Update () {
@@ -56,12 +48,6 @@ public class CharacterControl : MonoBehaviour {
         UpdateAging();
         ApplyMovement();
         CheckCurrentTile();
-    }
-
-    public void InitializeAge(float age)
-    {
-        currentAge = age;
-        currentStage = CheckStageForAge(currentAge);
     }
 
 
@@ -112,27 +98,16 @@ public class CharacterControl : MonoBehaviour {
 
     private void UpdateAging()
     {
-        currentAge += Time.deltaTime * ageChangingSpeed;
-        AgeStage stage = CheckStageForAge(currentAge);
-        if(stage == AgeStage.Death && currentStage != AgeStage.Death)
+        AgeStage stage = CharacterPresets.characterPresets.CheckStageForAge(currentAge);
+        
+        if(stage == AgeStage.Death && CurrentStage != AgeStage.Death)
         {
             Die();
         }
-        currentStage = stage;
+        CurrentAge += Time.deltaTime * ageChangingSpeed;
     }
 
-    public AgeStage CheckStageForAge(float age)
-    {
-        foreach(var s in ageStageSetting)
-        {
-            if(age < s.maxAge)
-            {
-                return s.stage;
-            }
-        }
 
-        return AgeStage.Kid;
-    }
 
     public void Die()
     {

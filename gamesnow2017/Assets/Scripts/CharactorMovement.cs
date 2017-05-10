@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[RequireComponent(typeof(CharacterController))]
 public class CharactorMovement : MonoBehaviour {
 
 
@@ -14,11 +16,12 @@ public class CharactorMovement : MonoBehaviour {
     
     private Vector3 desiredVelocity;
 
-    private Rigidbody rb;
+    private CharacterController characterController;
+    private Vector3 currentVelocity = Vector3.zero;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        characterController = GetComponent<CharacterController>();
     }
     // Use this for initialization
     void Start () {
@@ -32,7 +35,7 @@ public class CharactorMovement : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        Vector3 currentVelocity = rb.velocity;
+
         //update the velocity
         Vector3 desiredSpeedTangent = desiredVelocity.normalized;
         if (desiredVelocity.magnitude <= 0.01f)
@@ -86,10 +89,9 @@ public class CharactorMovement : MonoBehaviour {
         currentVelocity = vNormal + desiredVelocity + speedTangentDiff * desiredSpeedTangent;
 
         //assign the rigidbody velocity
-        rb.velocity = currentVelocity;
+        characterController.SimpleMove(currentVelocity);
 
         //update the direction
-
         Vector3 lookat = currentVelocity;
         lookat.y = 0;
         if (lookat.magnitude > 0.01f)
