@@ -20,8 +20,6 @@ public class CharacterControl : MonoBehaviour {
 
     public AgeStage CurrentStage { get; private set; }
     
-    public float ageChangingSpeed = 0.5f;
-
     public float maxSpeed;
     
     private float horizontalInput;
@@ -98,13 +96,17 @@ public class CharacterControl : MonoBehaviour {
 
     private void UpdateAging()
     {
-        AgeStage stage = CharacterPresets.characterPresets.CheckStageForAge(currentAge);
-        
-        if(stage == AgeStage.Death && CurrentStage != AgeStage.Death)
+        AgeStage stageOld = CharacterPresets.characterPresets.CheckStageForAge(currentAge);
+        CurrentAge += Time.deltaTime * LevelGenerationData.levelGenerationData.agingSpeed;
+
+        if (stageOld != AgeStage.Death && CurrentStage == AgeStage.Death)
         {
             Die();
+        }else if(stageOld != CurrentStage)
+        {
+            GameController.gameController.ChangeCharacter(currentAge);
         }
-        CurrentAge += Time.deltaTime * ageChangingSpeed;
+        
     }
 
 
@@ -116,8 +118,12 @@ public class CharacterControl : MonoBehaviour {
 
     public void PassLevel()
     {
-
+        MoveHorizontal(0);
+        MoveVertical(0);
+        ApplyMovement();
+        enabled = false;
     }
+
 
 
 }

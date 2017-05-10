@@ -14,6 +14,8 @@ public class GameController : MonoBehaviour {
     public float SavedAge { get { return savedAge; } set { savedAge = value; } }
     private float savedAge = 0;
 
+    public int CurrentLevelNum { get; private set; }
+
     void Awake()
     {
         if (gameController == null)
@@ -44,17 +46,42 @@ public class GameController : MonoBehaviour {
     public void RestartGame()
     {
         SavedAge = 0;
-        SceneManager.LoadScene("Level0");
+        CurrentLevelNum = 0;
+        SceneManager.LoadScene("Level" + CurrentLevelNum);
+    }
+    public void StartNextLevel()
+    {
+        if (HasNextScene())
+        {
+            SavedAge = 0;
+            CurrentLevelNum++;
+            SceneManager.LoadScene("Level" + CurrentLevelNum);
+        }
     }
 
+    public bool HasNextScene()
+    {
+        int num = (CurrentLevelNum + 1);
+        return Application.CanStreamedLevelBeLoaded("Level" + num);
+    }
 
     public void PassLevelLogic()
     {
+        CharacterControl.mainCharacter.PassLevel();
+        GamePlayUI.gamePlayUI.ShowEndGameUI();
 
     }
-
-    private void InitializeCharacterAndDestination()
+    
+    public void ChangeCharacter(float newAge)
     {
+        SavedAge = newAge;
 
+        CharacterControl prevCharacter = CharacterControl.mainCharacter;
+
+        GameObject newCharacter = Instantiate(CharacterPresets.characterPresets.GetCharacterPref(newAge), prevCharacter.transform.position, prevCharacter.transform.rotation);
+        newCharacter.GetComponent<CharacterControl>().CurrentAge = SavedAge;
+        Destroy(prevCharacter.gameObject);
+
+        Debug.Log("Character Changed");
     }
 }

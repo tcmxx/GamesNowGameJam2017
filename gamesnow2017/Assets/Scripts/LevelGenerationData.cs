@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelGenerationData : MonoBehaviour {
 
     public static LevelGenerationData levelGenerationData;
-    
+    public float agingSpeed = 0.5f;
     [System.Serializable]
     public struct TileItem
     {

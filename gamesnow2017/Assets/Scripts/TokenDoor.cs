@@ -9,7 +9,6 @@ public class TokenDoor : TokenBasic {
     public override void OnPlayerObtained(CharacterControl character)
     {
         base.OnPlayerObtained(character);
-        character.PassLevel();
         GameController.gameController.PassLevelLogic();
     }
 

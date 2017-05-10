@@ -26,10 +26,10 @@ public class TokenBasic : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(!obtained && other.attachedRigidbody != null && other.attachedRigidbody.gameObject.CompareTag("Player"))
+        if(!obtained && other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Obtained toekn: " + other.attachedRigidbody.gameObject.name);
-            OnPlayerObtained(other.attachedRigidbody.gameObject.GetComponent<CharacterControl>());
+            Debug.Log("Obtained toekn: " + other.gameObject.name);
+            OnPlayerObtained(other.gameObject.GetComponent<CharacterControl>());
         }
     }
 }

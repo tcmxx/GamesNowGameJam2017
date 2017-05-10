@@ -19,4 +19,9 @@ public class MenuUI : MonoBehaviour {
     {
         GameController.gameController.RestartGame();
     }
+
+    public void QuitButtonClicked()
+    {
+        Application.Quit();
+    }
 }
