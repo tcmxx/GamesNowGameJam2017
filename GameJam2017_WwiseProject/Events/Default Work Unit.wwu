@@ -14,6 +14,72 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Music" ID="{9ABA7F68-38A0-4C8B-8BC3-F9896C1298A7}">
+					<ChildrenList>
+						<Action Name="Play" ID="{D8143A1F-DDE5-4734-AADB-5E635530FD81}" ShortID="665974409" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{BC11063C-5426-4E84-AD18-2D757E91C6BE}" Global="false">
+									<ObjectRef Name="Music" ID="{C93E2B69-18D4-4528-AC84-F97100493E98}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Music" ID="{CC4E36FD-7000-4F00-8128-CA0263DF0017}">
+					<ChildrenList>
+						<Action Name="Stop" ID="{6135BD53-C39D-4BA8-AEA7-7824556B9155}" ShortID="710575591" Type="Stop" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{63C2FC58-B203-4418-B169-861CB4AF8E94}" Global="false">
+									<ObjectRef Name="Music" ID="{C93E2B69-18D4-4528-AC84-F97100493E98}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Button" ID="{B4773F47-8BB0-4D81-99D5-F9E70B5DF422}">
+					<ChildrenList>
+						<Action Name="Play" ID="{2316D577-4C5B-4E15-929B-8D0D2B3ABC32}" ShortID="349985011" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{DE6A2143-862A-433C-9222-645B4E202615}" Global="false">
+									<ObjectRef Name="Button" ID="{22F3E9F8-9993-4999-8631-78E00911AF79}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Land" ID="{A143AB89-AFC9-425A-94F2-68607A4CC3D2}">
+					<ChildrenList>
+						<Action Name="Play" ID="{B490B6F3-3282-4756-88B1-CB6EF3CAA70A}" ShortID="276864733" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{B01ADC67-101A-468F-90E2-C15744EB1195}" Global="false">
+									<ObjectRef Name="Land" ID="{F35CD6C0-B27D-4021-B009-E1F011E90C60}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Jump" ID="{B54B3A1E-CBD8-4829-9489-F46E255AC854}">
+					<ChildrenList>
+						<Action Name="Play" ID="{D7989438-B460-4006-95DB-25224B00E2A9}" ShortID="882424462" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{663B0D8A-3A8F-4FCE-A91D-DECC3F21B048}" Global="false">
+									<ObjectRef Name="Jump" ID="{98709D54-7C20-452B-BC07-B9200702C564}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Player_Gets_Older" ID="{C2627ED9-C1B8-4294-8CE4-B7C7BCD7710E}">
+					<ChildrenList>
+						<Action Name="Play" ID="{D7CE122B-671A-49E7-A2A9-27520665E3EF}" ShortID="62379366" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{58DF27E2-26B5-4C55-A0A8-3DA29FAF7C13}" Global="false">
+									<ObjectRef Name="Player_gets_older" ID="{4B7F684E-9076-4D3C-9161-7743CC45EE36}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

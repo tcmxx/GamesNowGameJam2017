@@ -1,5 +1,11 @@
 Event	ID	Name			Wwise Object Path	Notes
+	2099555730	Play_Button			\Default Work Unit\Play_Button	
+	2837384057	Stop_Music			\Default Work Unit\Stop_Music	
+	2932040671	Play_Music			\Default Work Unit\Play_Music	
+	3689126666	Play_Jump			\Default Work Unit\Play_Jump	
 	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
+	4126063088	Play_Player_Gets_Older			\Default Work Unit\Play_Player_Gets_Older	
+	4285282925	Play_Land			\Default Work Unit\Play_Land	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	3865314626	material			\Default Work Unit\material	
@@ -10,26 +16,61 @@ Switch	ID	Name	Switch Group			Notes
 	1289942167	stairs	material			
 	2654748154	water	material			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1027195342	lifebar			\Default Work Unit\lifebar	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	32496816	SFX_FS_Water_01	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Water_01_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Water\SFX_FS_Water_01		75340
-	57606575	SFX_FS_Concrete_07	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_07_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_07		62624
-	105205498	SFX_FS_Concrete_05	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_05_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_05		65948
-	131470487	SFX_FS_Concrete_02	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_02_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_02		60256
-	133244832	SFX_FS_Sand_07	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_07_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_07		111796
-	178173017	SFX_FS_Sand_08	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_08_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_08		110044
-	237263475	SFX_FS_Sand_06	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_06_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_06		109316
-	245981826	SFX_FS_Concrete_03	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_03_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_03		57204
-	274749242	SFX_FS_Sand_05	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_05_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_05		88980
-	297819900	SFX_FS_Concrete_06	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_06_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_06		56592
-	353389715	SFX_FS_Sand_01	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_01_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_01		114280
-	390757680	SFX_FS_Concrete_04	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_04_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_04		59360
-	444752991	SFX_FS_Sand_04	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_04_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_04		97724
-	452324945	SFX_FS_Water_04	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Water_04_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Water\SFX_FS_Water_04		69228
-	497367763	SFX_FS_Sand_02	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_02_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_02		94416
-	555535313	SFX_FS_Concrete_01	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_01_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_01		68620
-	623495334	SFX_FS_Water_03	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Water_03_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Water\SFX_FS_Water_03		71544
-	625260691	SFX_FS_Water_05	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Water_05_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Water\SFX_FS_Water_05		61420
-	939148684	SFX_FS_Water_02	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Water_02_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Water\SFX_FS_Water_02		83564
-	954046450	SFX_FS_Sand_03	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_03_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_03		106516
-	1052558988	SFX_FS_Concrete_08	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_08_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_08		65040
+	32496816	SFX_FS_Water_01	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Water_01_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Water\SFX_FS_Water_01		8477
+	39945021	SFX_FS_Concrete_03	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_03_DB10EB20.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Stairs\SFX_FS_Concrete_03		3885
+	40755017	SFX_Button_01	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_Button_01_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Button\SFX_Button_01		3549
+	57606575	SFX_FS_Concrete_07	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_07_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_07		7093
+	84266813	6 loop	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\6 loop_FF5731BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Music\6 loop		114816
+	96407252	SFX_FS_Concrete_08	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_08_F974425E.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Stairs\SFX_FS_Concrete_08		5305
+	98619150	Jump_up_2	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\Jump_up_2_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Jump\Jump_up\Jump_up_2		6287
+	105205498	SFX_FS_Concrete_05	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_05_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_05		7394
+	131470487	SFX_FS_Concrete_02	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_02_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_02		6471
+	131873290	SFX_FS_Concrete_07	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_07_992BE1DD.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Stairs\SFX_FS_Concrete_07		4731
+	132401368	SFX_Player_Gets_Older_01	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_Player_Gets_Older_01_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player_gets_older\SFX_Player_Gets_Older_01		35166
+	133244832	SFX_FS_Sand_07	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_07_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_07		5255
+	178173017	SFX_FS_Sand_08	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_08_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_08		5208
+	195668716	SFX_FS_Concrete_05	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_05_407D8CFF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Stairs\SFX_FS_Concrete_05		4738
+	196940591	13 loop	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\13 loop_FF5731BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Music\13 loop		25140
+	197171607	Land_down_01	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\Land_down_01_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Land\Land_down_01		8863
+	198400396	12 loop	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\12 loop_FF5731BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Music\12 loop		100629
+	227996583	SFX_FS_Concrete_02	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_02_E2F3F34F.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Stairs\SFX_FS_Concrete_02		3419
+	237263475	SFX_FS_Sand_06	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_06_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_06		9222
+	245981826	SFX_FS_Concrete_03	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_03_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_03		5981
+	248666953	SFX_Button_02	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_Button_02_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Button\SFX_Button_02		5948
+	260952832	Land_down_02	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\Land_down_02_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Land\Land_down_02		9810
+	274749242	SFX_FS_Sand_05	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_05_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_05		4452
+	297819900	SFX_FS_Concrete_06	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_06_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_06		7055
+	299375713	2 loop	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\2 loop_FF5731BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Music\2 loop		156478
+	335258551	SFX_FS_Concrete_01	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_01_0E9242E5.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Stairs\SFX_FS_Concrete_01		3388
+	351612224	SFX_FS_Concrete_04	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_04_198E0DBD.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Stairs\SFX_FS_Concrete_04		3454
+	353389715	SFX_FS_Sand_01	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_01_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_01		9448
+	390757680	SFX_FS_Concrete_04	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_04_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_04		6415
+	404946547	Jump_up_1	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\Jump_up_1_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Jump\Jump_up\Jump_up_1		6891
+	433556230	5 loop	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\5 loop_FF5731BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Music\5 loop		130561
+	439734008	11 loop	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\11 loop_FF5731BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Music\11 loop		121654
+	444752991	SFX_FS_Sand_04	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_04_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_04		7992
+	452324945	SFX_FS_Water_04	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Water_04_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Water\SFX_FS_Water_04		8813
+	497367763	SFX_FS_Sand_02	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_02_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_02		4388
+	514207207	7 loop	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\7 loop_FF5731BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Music\7 loop		114903
+	524611519	3 loop	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\3 loop_FF5731BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Music\3 loop		122417
+	555535313	SFX_FS_Concrete_01	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_01_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_01		6997
+	623495334	SFX_FS_Water_03	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Water_03_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Water\SFX_FS_Water_03		8225
+	625260691	SFX_FS_Water_05	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Water_05_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Water\SFX_FS_Water_05		7112
+	701658292	8 loop	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\8 loop_FF5731BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Music\8 loop		135212
+	707911695	10 loop	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\10 loop_FF5731BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Music\10 loop		135061
+	721136492	9 loop	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\9 loop_FF5731BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Music\9 loop		133868
+	767909599	Jump_voice_01	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\Jump_voice_01_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Jump\Jump_voice_01		2631
+	777290902	SFX_Button_03	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_Button_03_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Button\SFX_Button_03		6158
+	852043199	Jump_up_3	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\Jump_up_3_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Jump\Jump_up\Jump_up_3		8179
+	895561978	Land_down_03	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\Land_down_03_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Land\Land_down_03		13674
+	904547915	1 loop	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\1 loop_FF5731BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Music\1 loop		142350
+	908602108	4 loop	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\4 loop_FF5731BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Music\4 loop		126462
+	939148684	SFX_FS_Water_02	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Water_02_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Water\SFX_FS_Water_02		9559
+	954046450	SFX_FS_Sand_03	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_03_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_03		4896
+	1039904611	SFX_FS_Concrete_06	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_06_EE2FC51D.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Stairs\SFX_FS_Concrete_06		4142
+	1052558988	SFX_FS_Concrete_08	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Concrete_08_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Concrete\SFX_FS_Concrete_08		7419
 

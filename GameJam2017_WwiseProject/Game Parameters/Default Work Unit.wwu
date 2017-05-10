@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{0524ABF1-60A1-4E54-B409-96765AF28C69}" SchemaVersion="75">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{0524ABF1-60A1-4E54-B409-96765AF28C69}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{0524ABF1-60A1-4E54-B409-96765AF28C69}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="lifebar" ID="{703F9145-6DA0-4B65-937C-FA044D9243B3}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>
