@@ -6,7 +6,7 @@ using UnityEngine;
 public class PowerupAge : PowerupBasic
 {
 
-    public float changeOfAge = 0;
+    public float changeOfAgeTime = 0;
 
     public override void OnPlayerObtained(CharacterControl character)
     {
@@ -14,7 +14,7 @@ public class PowerupAge : PowerupBasic
 
         AgeStage stageOld = character.CurrentStage;
 
-        character.CurrentAge += changeOfAge;
+        character.CurrentAge += changeOfAgeTime/LevelGenerationData.levelGenerationData.agingSpeed;
         if(character.CurrentAge <= 0)
         {
             character.CurrentAge = 0;

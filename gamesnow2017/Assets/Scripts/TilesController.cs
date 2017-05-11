@@ -143,12 +143,19 @@ public class TilesController : MonoBehaviour {
             if (currentWeight >= num)
             {
                 result = Instantiate(i.pref, position, Quaternion.identity, this.transform);
-                if (allowBlock == false && result.GetComponent<BasicTile>().canStandOn == false)
+                BasicTile tile = result.GetComponent<BasicTile>();
+                if (allowBlock == false && tile.canStandOn == false)
                 {
                     //not allow blocked tile ant it is a block tile.
                     Destroy(result);
                     result = Instantiate(planeTilePref, position, Quaternion.identity, this.transform);
                 }
+
+                if (tile.symmetric)
+                {
+                    result.transform.localEulerAngles = Vector3.up*((int)(Random.Range(0, 4.0f))) * 90;
+                }
+                
                 break;
             }
         }

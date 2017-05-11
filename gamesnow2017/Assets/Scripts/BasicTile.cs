@@ -6,6 +6,7 @@ using UnityEngine;
 public class BasicTile : MonoBehaviour {
 
     //whether this object can be standed on. used for the map generator to put objects
+    public bool symmetric = true;
     public bool canStandOn = true;
     public string wwiseSwitch = "";
     public StageBasedParamter[] stageBasedParamters;
