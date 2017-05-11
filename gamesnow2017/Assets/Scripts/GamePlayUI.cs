@@ -14,9 +14,21 @@ public class GamePlayUI : MonoBehaviour {
     public GameObject passGameUI;
     public GameObject loseGameUI;
     public GameObject continueButton;
+    public Image powerup1Image;
+    public Image powerup2Image;
+    public Sprite noPowerupSprite;
     [Header("Paramters")]
     public float maxAgeBar = 100f;
 
+
+    [System.Serializable]
+    public struct IconColor
+    {
+        public Image icon;
+        public AgeStage[] ageStage;
+        public Color[] color;
+    }
+    public IconColor[] iconColors;
 
     private void Awake()
     {
@@ -31,7 +43,7 @@ public class GamePlayUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         UpdageAgeInfo();
-
+        ChangeIconsColor(CharacterControl.mainCharacter.CurrentStage);
     }
 
 
@@ -76,5 +88,42 @@ public class GamePlayUI : MonoBehaviour {
     {
         ageBar.fillAmount = CharacterControl.mainCharacter.CurrentAge/maxAgeBar;
         ageText.text = "Age: " + CharacterControl.mainCharacter.CurrentAge.ToString("F0");
+    }
+
+
+    public void ChangeIconsColor(AgeStage ageStage)
+    {
+        foreach(var icon in iconColors)
+        {
+            Color col = Color.white;
+            for(int i = 0; i < icon.ageStage.Length; ++i)
+            {
+                if(icon.ageStage[i] == ageStage)
+                {
+                    col = icon.color[i];
+                }
+            }
+
+            icon.icon.color = col;
+        }
+    }
+
+    public void SetPowerupImages(PowerupBasic powerup1, PowerupBasic powerup2)
+    {
+        if(powerup1 != null)
+        {
+            powerup1Image.sprite = powerup1.powerUpImage;
+        }else
+        {
+            powerup1Image.sprite = noPowerupSprite;
+        }
+
+        if(powerup2 != null)
+        {
+            powerup2Image.sprite = powerup2.powerUpImage;
+        }else
+        {
+            powerup2Image.sprite = noPowerupSprite;
+        }
     }
 }

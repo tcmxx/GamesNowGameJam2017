@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class MusicController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public static MusicController musicController;
+
+    private void Awake()
+    {
+        musicController = this;
+    }
+
+    // Use this for initialization
+    void Start () {
         AkSoundEngine.PostEvent("Play_Music", gameObject);
 	}
 	

@@ -16,6 +16,9 @@ public class GameController : MonoBehaviour {
 
     public int CurrentLevelNum { get; private set; }
 
+    private PowerupBasic powerup1 = null;
+    private PowerupBasic powerup2 = null;
+
     void Awake()
     {
         if (gameController == null)
@@ -48,7 +51,6 @@ public class GameController : MonoBehaviour {
         SavedAge = 0;
         CurrentLevelNum = 0;
         SceneTransitionHelper.Instance.StartLoadingScene("Level" + CurrentLevelNum);
-        //SceneManager.LoadScene("Level" + CurrentLevelNum);
     }
     public void StartNextLevel()
     {
@@ -57,7 +59,6 @@ public class GameController : MonoBehaviour {
             SavedAge = 0;
             CurrentLevelNum++;
             SceneTransitionHelper.Instance.StartLoadingScene("Level" + CurrentLevelNum);
-            //SceneManager.LoadScene("Level" + CurrentLevelNum);
         }
     }
 
@@ -93,5 +94,37 @@ public class GameController : MonoBehaviour {
 
         AkSoundEngine.PostEvent("Play_Player_Gets_Older", gameObject);
         Debug.Log("Character Changed");
+    }
+
+
+    public void ObtainPowerUp(PowerupBasic powerup)
+    {
+        powerup.transform.position = Vector3.back * 1000;
+        if(powerup1 == null)
+        {
+            powerup1 = powerup;
+        }else if(powerup2 == null)
+        {
+            powerup2 = powerup;
+        }else
+        {
+            Destroy(powerup1.gameObject);
+            powerup1 = powerup2;
+            powerup2 = powerup;
+        }
+
+        GamePlayUI.gamePlayUI.SetPowerupImages(powerup1, powerup2);
+    }
+
+    public void UseNextPowerup()
+    {
+        if(powerup1 != null)
+        {
+            powerup1.OnUsePowerup(CharacterControl.mainCharacter);
+            powerup1 = powerup2;
+            powerup2 = null;
+        }
+
+        GamePlayUI.gamePlayUI.SetPowerupImages(powerup1, powerup2);
     }
 }

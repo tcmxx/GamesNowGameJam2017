@@ -7,16 +7,23 @@ public class PowerupSpeed : PowerupBasic {
     public float changeOfAcceleration = 0;
     public float chageOfDeceleration = 0;
     public float changeOfMaxSpeed = 0;
-    public float changeOfAge = 0;
+    public float changeOfAgeTime = 0;
 
-    public override void OnPlayerObtained(CharacterControl character)
+    public override void OnUsePowerup(CharacterControl character)
     {
-        base.OnPlayerObtained(character);
+        base.OnUsePowerup(character);
 
-        character.CurrentAge += changeOfAge;
+        AgeStage stageOld = character.CurrentStage;
+
+        character.CurrentAge += changeOfAgeTime * LevelGenerationData.levelGenerationData.agingSpeed;
         if (character.CurrentAge <= 0)
         {
             character.CurrentAge = 0;
+        }
+
+        if (stageOld != character.CurrentStage)
+        {
+            GameController.gameController.ChangeCharacter(character.CurrentAge);
         }
 
         ApplyAsBuff(buffLastTime, character);

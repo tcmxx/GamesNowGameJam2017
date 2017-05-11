@@ -10,7 +10,14 @@ public class CharacterControl : MonoBehaviour {
 
     public float CurrentAge {
         get { return currentAge; }
-        set { currentAge = value; CurrentStage = CharacterPresets.characterPresets.CheckStageForAge(currentAge); }
+        set {
+            currentAge = value;
+            CurrentStage = CharacterPresets.characterPresets.CheckStageForAge(currentAge);
+            if(CurrentStage == AgeStage.Death)
+            {
+                Die();
+            }
+        }
     }
     [SerializeField]
     private float currentAge;
@@ -59,6 +66,7 @@ public class CharacterControl : MonoBehaviour {
     public void MoveHorizontal(float value)
     {
         horizontalInput = value;
+        
     }
     public void MoveVertical(float value)
     {
@@ -74,6 +82,7 @@ public class CharacterControl : MonoBehaviour {
         {
             speed = CurrentTile.ModifySpeed(speed,this);
         }
+        
 
         vel.Normalize();
         BasicCharactor.Move(vel, speed);
@@ -106,12 +115,10 @@ public class CharacterControl : MonoBehaviour {
         AgeStage stageOld = CharacterPresets.characterPresets.CheckStageForAge(CurrentAge);
         CurrentAge += Time.deltaTime * LevelGenerationData.levelGenerationData.agingSpeed;
 
-        if (stageOld != AgeStage.Death && CurrentStage == AgeStage.Death)
-        {
-            Die();
-        }else if(stageOld != CurrentStage)
+        if(stageOld != CurrentStage && CurrentStage != AgeStage.Death)
         {
             GameController.gameController.ChangeCharacter(currentAge);
+            GamePlayUI.gamePlayUI.ChangeIconsColor(CurrentStage);
         }
         
     }
@@ -124,6 +131,7 @@ public class CharacterControl : MonoBehaviour {
         MoveVertical(0);
         ApplyMovement();
         enabled = false;
+        GetComponent<PlayerInput>().enabled = false;
         GameController.gameController.PlayeyDieLogic();
     }
 
@@ -133,6 +141,7 @@ public class CharacterControl : MonoBehaviour {
         MoveVertical(0);
         ApplyMovement();
         enabled = false;
+        GetComponent<PlayerInput>().enabled = false;
     }
 
 

@@ -113,7 +113,7 @@ public class CharactorMovement : MonoBehaviour {
 
         //assign the rigidbody velocity
         characterController.SimpleMove(CurrentVelocity);
-
+        //Debug.Log(CurrentVelocity);
         //update the direction
         Vector3 lookat = CurrentVelocity;
         lookat.y = 0;

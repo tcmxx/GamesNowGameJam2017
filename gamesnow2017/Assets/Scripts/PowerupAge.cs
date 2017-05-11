@@ -8,13 +8,13 @@ public class PowerupAge : PowerupBasic
 
     public float changeOfAgeTime = 0;
 
-    public override void OnPlayerObtained(CharacterControl character)
+    public override void OnUsePowerup(CharacterControl character)
     {
-        base.OnPlayerObtained(character);
+        base.OnUsePowerup(character);
 
         AgeStage stageOld = character.CurrentStage;
 
-        character.CurrentAge += changeOfAgeTime/LevelGenerationData.levelGenerationData.agingSpeed;
+        character.CurrentAge += changeOfAgeTime*LevelGenerationData.levelGenerationData.agingSpeed;
         if(character.CurrentAge <= 0)
         {
             character.CurrentAge = 0;
@@ -25,6 +25,6 @@ public class PowerupAge : PowerupBasic
             GameController.gameController.ChangeCharacter(character.CurrentAge);
         }
 
-        Destroy(gameObject);
+        ApplyAsBuff(0.5f, character);
     }
 }

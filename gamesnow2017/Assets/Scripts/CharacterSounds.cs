@@ -9,11 +9,12 @@ public class CharacterSounds : MonoBehaviour {
 
     private void Start()
     {
-        AkSoundEngine.SetSwitch("material", "concrete", gameObject);
+        AkSoundEngine.SetSwitch("material", "concrete", MusicController.musicController.gameObject);
     }
 
     public void PlayFootStep()
     {
-        AkSoundEngine.PostEvent(footstepSound, obj);
+        AkSoundEngine.PostEvent(footstepSound, MusicController.musicController.gameObject);
+        AkSoundEngine.SetRTPCValue("lifebar", CharacterControl.mainCharacter.CurrentAge / GamePlayUI.gamePlayUI.maxAgeBar * 100, MusicController.musicController.gameObject);
     }
 }

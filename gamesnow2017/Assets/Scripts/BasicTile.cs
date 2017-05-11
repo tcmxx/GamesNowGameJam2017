@@ -39,7 +39,7 @@ public class BasicTile : MonoBehaviour {
         charactor.BasicCharactor.deceleration += param.decelerationOffset;
         if (wwiseSwitch != "")
         {
-            AkSoundEngine.SetSwitch("material", wwiseSwitch, charactor.gameObject);
+            AkSoundEngine.SetSwitch("material", wwiseSwitch, MusicController.musicController.gameObject);
         }
 
 

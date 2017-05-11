@@ -6,9 +6,9 @@ public class Door : PowerupBasic {
 
 
 
-    public override void OnPlayerObtained(CharacterControl character)
+    public override void OnUsePowerup(CharacterControl character)
     {
-        base.OnPlayerObtained(character);
+        base.OnUsePowerup(character);
         GameController.gameController.PassLevelLogic();
     }
 

@@ -6,7 +6,10 @@ public class PowerupBasic : MonoBehaviour {
 
     public bool canMultipleBuff = false;
 
-    public string buffTypeID; 
+    public string buffTypeID;
+    public Sprite powerUpImage;
+
+    public bool usable = true;
 
     protected bool obtained = false;
     protected CharacterControl effectedCharacter = null;
@@ -32,9 +35,10 @@ public class PowerupBasic : MonoBehaviour {
         }
     }
 
-    public virtual void OnPlayerObtained(CharacterControl character)
+    public virtual void OnUsePowerup(CharacterControl character)
     {
         obtained = true;
+        AkSoundEngine.PostEvent("Play_PowerUp", character.gameObject);
     }
 
     public virtual void BuffUpdate()
@@ -59,7 +63,14 @@ public class PowerupBasic : MonoBehaviour {
         {
             Debug.Log("Obtained toekn: " + other.gameObject.name);
             effectedCharacter = other.gameObject.GetComponent<CharacterControl>();
-            OnPlayerObtained(effectedCharacter);
+            if (usable)
+            {
+                GameController.gameController.ObtainPowerUp(this);
+                AkSoundEngine.PostEvent("Play_PowerUp", effectedCharacter.gameObject);
+            }else
+            {
+                OnUsePowerup(effectedCharacter);
+            }
         }
     }
 

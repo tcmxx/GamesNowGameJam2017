@@ -23,5 +23,10 @@ public class PlayerInput : MonoBehaviour {
 	void Update () {
         charactorControl.MoveHorizontal(Input.GetAxis("Horizontal"));
         charactorControl.MoveVertical(Input.GetAxis("Vertical"));
+
+        if (Input.GetButtonDown("UsePowerup"))
+        {
+            GameController.gameController.UseNextPowerup();
+        }
 	}
 }
