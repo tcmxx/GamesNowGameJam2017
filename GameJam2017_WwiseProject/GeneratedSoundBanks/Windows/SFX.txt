@@ -1,6 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	2099555730	Play_Button			\Default Work Unit\Play_Button	
 	2837384057	Stop_Music			\Default Work Unit\Stop_Music	
+	2876792902	Play_PowerUp			\Default Work Unit\Play_PowerUp	
 	2932040671	Play_Music			\Default Work Unit\Play_Music	
 	3689126666	Play_Jump			\Default Work Unit\Play_Jump	
 	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
@@ -54,6 +55,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	439734008	11 loop	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\11 loop_FF5731BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Music\11 loop		121654
 	444752991	SFX_FS_Sand_04	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_04_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_04		7992
 	452324945	SFX_FS_Water_04	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Water_04_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Water\SFX_FS_Water_04		8813
+	466430413	SFX_PowerUp_Apple_01	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_PowerUp_Apple_01_41DE7F6C.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PowerUp\SFX_PowerUp_Apple_01		116508
 	497367763	SFX_FS_Sand_02	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\SFX_FS_Sand_02_E95633E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\Sand\SFX_FS_Sand_02		4388
 	514207207	7 loop	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\7 loop_FF5731BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Music\7 loop		114903
 	524611519	3 loop	C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\.cache\Windows\SFX\3 loop_FF5731BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Music\3 loop		122417

@@ -22,6 +22,7 @@
 				<Event Id="4285282925" Name="Play_Land" ObjectPath="\Events\Default Work Unit\Play_Land"/>
 				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music"/>
 				<Event Id="4126063088" Name="Play_Player_Gets_Older" ObjectPath="\Events\Default Work Unit\Play_Player_Gets_Older"/>
+				<Event Id="2876792902" Name="Play_PowerUp" ObjectPath="\Events\Default Work Unit\Play_PowerUp"/>
 				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Stop_Music"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -160,6 +161,10 @@
 				<File Id="452324945" Language="SFX">
 					<ShortName>SFX_FS_Water_04.wav</ShortName>
 					<Path>SFX\SFX_FS_Water_04_E95633E1.wem</Path>
+				</File>
+				<File Id="466430413" Language="SFX">
+					<ShortName>SFX_PowerUp_Apple_01.wav</ShortName>
+					<Path>SFX\SFX_PowerUp_Apple_01_41DE7F6C.wem</Path>
 				</File>
 				<File Id="497367763" Language="SFX">
 					<ShortName>SFX_FS_Sand_02.wav</ShortName>
