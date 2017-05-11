@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PowerupBasic : MonoBehaviour {
 
+    public bool canMultipleBuff = false;
+
+    public string buffTypeID; 
+
     protected bool obtained = false;
     protected CharacterControl effectedCharacter = null;
 
@@ -62,9 +66,19 @@ public class PowerupBasic : MonoBehaviour {
 
     public void ApplyAsBuff(float lastTime, CharacterControl character)
     {
+        if (!canMultipleBuff)
+        {
+            PowerupBasic powerup =character.GetComponentInChildren<PowerupBasic>();
+            if (powerup != null && powerup.buffTypeID == buffTypeID)
+            {
+                powerup.RemoveBuff();
+            }
+        }
+
         effectedCharacter = character;
         buffLeftTime = lastTime;
         transform.SetParent(character.transform);
+        transform.localPosition = Vector3.zero;
         OnBuffApplied();
     }
 

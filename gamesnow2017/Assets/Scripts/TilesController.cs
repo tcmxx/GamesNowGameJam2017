@@ -45,7 +45,7 @@ public class TilesController : MonoBehaviour {
         float totalWeight = 0;
         foreach(var t in currentGenerationData.tileItems)
         {
-            totalWeight += t.tileWeight;
+            totalWeight += t.data;
         }
 
         for(int i = 0; i < currentGenerationData.sizeWidth; ++i)
@@ -57,6 +57,11 @@ public class TilesController : MonoBehaviour {
                     currentGenerationData.GridToWorldPosition(i,j), !path[i,j]);
 
                 tilesArray[i, j] = newTile.GetComponent<BasicTile>();
+
+                if (tilesArray[i, j].canStandOn)
+                {
+                    RandomInstantiatePowerUp(currentGenerationData.GridToWorldPosition(i, j) + Vector3.up*0.35f);
+                }
             }
         }
 
@@ -134,10 +139,10 @@ public class TilesController : MonoBehaviour {
         float currentWeight = 0;
         foreach (var i in currentGenerationData.tileItems)
         {
-            currentWeight += i.tileWeight;
+            currentWeight += i.data;
             if (currentWeight >= num)
             {
-                result = Instantiate(i.tilePref, position, Quaternion.identity, this.transform);
+                result = Instantiate(i.pref, position, Quaternion.identity, this.transform);
                 if (allowBlock == false && result.GetComponent<BasicTile>().canStandOn == false)
                 {
                     //not allow blocked tile ant it is a block tile.
@@ -165,4 +170,21 @@ public class TilesController : MonoBehaviour {
         return  tilesArray[width, height];
     }
 
+    private GameObject RandomInstantiatePowerUp(Vector3 position)
+    {
+        GameObject result = null;
+        float num = Random.Range(0, 1.0f);
+        float currentChance = 0;
+        foreach (var i in currentGenerationData.powerupItems)
+        {
+            currentChance += i.data;
+            if (currentChance >= num)
+            {
+                result = Instantiate(i.pref, position, Quaternion.identity, this.transform);
+                break;
+            }
+        }
+        return result;
+    }
+    
 }

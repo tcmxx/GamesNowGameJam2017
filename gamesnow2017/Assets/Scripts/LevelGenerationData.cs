@@ -7,10 +7,10 @@ public class LevelGenerationData : MonoBehaviour {
     public static LevelGenerationData levelGenerationData;
     public float agingSpeed = 0.5f;
     [System.Serializable]
-    public struct TileItem
+    public struct PrefWithData
     {
-        public GameObject tilePref;
-        public float tileWeight;    //chance of this tile
+        public GameObject pref;
+        public float data;   
     }
 
     public int sizeWidth = 8;       //size of the scene.
@@ -19,8 +19,9 @@ public class LevelGenerationData : MonoBehaviour {
     public float tileWidth = 1;
     public float tileLength = 1;
     //tiles
-    public TileItem[] tileItems;
+    public PrefWithData[] tileItems;
 
+    public PrefWithData[] powerupItems;
 
     private void Awake()
     {

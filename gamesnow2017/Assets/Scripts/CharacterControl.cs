@@ -29,8 +29,6 @@ public class CharacterControl : MonoBehaviour {
 
 
 
-
-
     private void Awake()
     {
         BasicCharactor = GetComponent<CharactorMovement>();
@@ -105,7 +103,7 @@ public class CharacterControl : MonoBehaviour {
 
     private void UpdateAging()
     {
-        AgeStage stageOld = CharacterPresets.characterPresets.CheckStageForAge(currentAge);
+        AgeStage stageOld = CharacterPresets.characterPresets.CheckStageForAge(CurrentAge);
         CurrentAge += Time.deltaTime * LevelGenerationData.levelGenerationData.agingSpeed;
 
         if (stageOld != AgeStage.Death && CurrentStage == AgeStage.Death)
