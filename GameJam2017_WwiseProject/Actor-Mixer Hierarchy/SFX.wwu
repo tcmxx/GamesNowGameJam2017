@@ -981,6 +981,11 @@
 						<Sound Name="13 loop" ID="{84C90796-3FEC-48B2-A6A2-2EEFC4F0CB52}" ShortID="639622082" Type="SoundFX">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1479,6 +1484,11 @@
 						</RandomSequenceContainer>
 						<Sound Name="Jump_voice_01" ID="{8A5CDDE2-44A8-4C3B-BBD5-5BFC10A45B32}" ShortID="28184641" Type="SoundFX">
 							<PropertyList>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -1491,6 +1501,11 @@
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
