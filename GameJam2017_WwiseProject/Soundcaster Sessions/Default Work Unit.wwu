@@ -29,7 +29,7 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="lifebar" ID="{703F9145-6DA0-4B65-937C-FA044D9243B3}"/>
-							<Value>0</Value>
+							<Value>29</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
