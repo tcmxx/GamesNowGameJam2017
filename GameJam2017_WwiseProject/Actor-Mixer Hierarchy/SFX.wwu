@@ -4,12 +4,137 @@
 		<WorkUnit Name="SFX" ID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}" OwnerID="{538453DB-AEFA-49EA-A21F-B521EC67223E}" PersistMode="Nested">
 			<ChildrenList>
 				<SwitchContainer Name="Footsteps" ID="{794B27D9-CF76-4BD0-9FF7-BEB9BE98385F}" ShortID="658844528">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>30</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{C05A9269-00B4-4912-87EE-9DB40800D6D9}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<RTPCList>
+								<RTPC Name="" ID="{7AE6F393-1DA9-458C-AD5E-EE39CC985AFB}" ShortID="796357521">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="lifebar" ID="{703F9145-6DA0-4B65-937C-FA044D9243B3}" WorkUnitID="{0524ABF1-60A1-4E54-B409-96765AF28C69}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{9813EBCF-5144-4BD1-9F41-CF879854264C}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>0</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>50.27685</XPos>
+												<YPos>-3</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>80.06645</XPos>
+												<YPos>6</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>41</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{43DB1F15-E934-446C-B958-EE751C0C919E}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Min" Type="Real64" Value="-25"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+							<RTPCList>
+								<RTPC Name="" ID="{093474A0-BFE2-4F56-910E-5F037282CC9C}" ShortID="671814172">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="lifebar" ID="{703F9145-6DA0-4B65-937C-FA044D9243B3}" WorkUnitID="{0524ABF1-60A1-4E54-B409-96765AF28C69}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{00291A25-0515-445D-B8A7-0EA2653F8238}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>741</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>9.60452</XPos>
+												<YPos>650</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>24.7175141242938</XPos>
+												<YPos>541</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>50.28249</XPos>
+												<YPos>42</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>74.8587570621469</XPos>
+												<YPos>-400</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>78.9548</XPos>
+												<YPos>-474</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>-782</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{876815DA-7551-43FC-9913-4F2410EA0B10}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Min" Type="Real64" Value="-3"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Vorbis Auto Detect High" ID="{6F6A99BE-4FD1-49D3-89AF-54BE30CA1588}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{99D7376A-645A-4B66-9BF9-F5656A8907FB}"/>
+							<ObjectRef Name="In-Game SFX" ID="{D0A19D52-26B8-4DBC-9CFD-4066EA77561F}" WorkUnitID="{99D7376A-645A-4B66-9BF9-F5656A8907FB}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -703,7 +828,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-9</Value>
+								<Value>-12</Value>
 							</ValueList>
 							<RTPCList>
 								<RTPC Name="" ID="{C4D2B970-E1F4-492D-A18E-CBA422137B77}" ShortID="544100925">
@@ -1394,7 +1519,7 @@
 							<ObjectRef Name="Vorbis Auto Detect High" ID="{6F6A99BE-4FD1-49D3-89AF-54BE30CA1588}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{99D7376A-645A-4B66-9BF9-F5656A8907FB}"/>
+							<ObjectRef Name="In-Game SFX" ID="{D0A19D52-26B8-4DBC-9CFD-4066EA77561F}" WorkUnitID="{99D7376A-645A-4B66-9BF9-F5656A8907FB}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -1465,6 +1590,37 @@
 									<Modifier Name="" ID="{B00F2944-D715-46F2-966E-C0F79418BFEC}"/>
 								</ModifierInfo>
 							</ModifierList>
+							<RTPCList>
+								<RTPC Name="" ID="{6A3E7A02-2016-477D-821F-9FD3ACCA63EC}" ShortID="731738805">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="lifebar" ID="{703F9145-6DA0-4B65-937C-FA044D9243B3}" WorkUnitID="{0524ABF1-60A1-4E54-B409-96765AF28C69}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{A9C89AD5-4934-4295-A518-6904442E0597}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>577</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>49.83389</XPos>
+												<YPos>42</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ModifierList>
@@ -1484,7 +1640,7 @@
 							<ObjectRef Name="Vorbis Auto Detect High" ID="{6F6A99BE-4FD1-49D3-89AF-54BE30CA1588}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{99D7376A-645A-4B66-9BF9-F5656A8907FB}"/>
+							<ObjectRef Name="In-Game SFX" ID="{D0A19D52-26B8-4DBC-9CFD-4066EA77561F}" WorkUnitID="{99D7376A-645A-4B66-9BF9-F5656A8907FB}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
