@@ -8,6 +8,7 @@
 						<ObjectRef Name="Play_Footsteps" ID="{EA39B617-8A16-41C2-80FA-FE15BA320B6F}" WorkUnitID="{03DEE89A-7445-447A-8745-75B38247D365}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Land" ID="{A143AB89-AFC9-425A-94F2-68607A4CC3D2}" WorkUnitID="{03DEE89A-7445-447A-8745-75B38247D365}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Player_Gets_Older" ID="{C2627ED9-C1B8-4294-8CE4-B7C7BCD7710E}" WorkUnitID="{03DEE89A-7445-447A-8745-75B38247D365}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_PowerUp" ID="{BD2DDAC0-68A2-4678-8DFC-B300E58443A6}" WorkUnitID="{03DEE89A-7445-447A-8745-75B38247D365}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Jump" ID="{B54B3A1E-CBD8-4829-9489-F46E255AC854}" WorkUnitID="{03DEE89A-7445-447A-8745-75B38247D365}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Music" ID="{9ABA7F68-38A0-4C8B-8BC3-F9896C1298A7}" WorkUnitID="{03DEE89A-7445-447A-8745-75B38247D365}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Button" ID="{B4773F47-8BB0-4D81-99D5-F9E70B5DF422}" WorkUnitID="{03DEE89A-7445-447A-8745-75B38247D365}" Filter="7" Origin="Manual"/>

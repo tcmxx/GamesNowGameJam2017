@@ -80,6 +80,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_PowerUp" ID="{BD2DDAC0-68A2-4678-8DFC-B300E58443A6}">
+					<ChildrenList>
+						<Action Name="Play" ID="{DE90BC29-33DD-48C9-A8D0-6EFC50BBF956}" ShortID="762701167" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{1EBD2752-FC79-4F97-AA2A-B7B5C7893367}" Global="false">
+									<ObjectRef Name="PowerUp" ID="{3A0AE56E-CF3E-468F-9203-22CEB079DFD2}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
