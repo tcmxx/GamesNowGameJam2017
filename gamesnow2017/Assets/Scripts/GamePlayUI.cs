@@ -11,7 +11,8 @@ public class GamePlayUI : MonoBehaviour {
     [Header("References")]
     public Image ageBar;
     public Text ageText;
-    public GameObject endGameUI;
+    public GameObject passGameUI;
+    public GameObject loseGameUI;
     public GameObject continueButton;
     [Header("Paramters")]
     public float maxAgeBar = 100f;
@@ -34,30 +35,42 @@ public class GamePlayUI : MonoBehaviour {
     }
 
 
-    public void ShowEndGameUI()
+    public void ShowEndGameUI(bool pass)
     {
-        endGameUI.SetActive(true);
-        if (!GameController.gameController.HasNextScene())
+        if (pass)
         {
-            continueButton.SetActive(false);
-        }
-        else
+            passGameUI.SetActive(true);
+            if (!GameController.gameController.HasNextScene())
+            {
+                continueButton.SetActive(false);
+            }
+            else
+            {
+                continueButton.SetActive(true);
+            }
+        }else
         {
-            continueButton.SetActive(true);
+            loseGameUI.SetActive(true);
         }
     }
 
     public void OnContinueButtonClicked()
     {
         GameController.gameController.StartNextLevel();
+        AkSoundEngine.PostEvent("Play_Button", gameObject);
     }
 
     public void OnQuitClicked()
     {
         SceneManager.LoadScene("MenuScene");
+        AkSoundEngine.PostEvent("Play_Button", gameObject);
     }
 
-
+    public void OnRestartClicked()
+    {
+        GameController.gameController.RestartGame();
+        AkSoundEngine.PostEvent("Play_Button", gameObject);
+    }
 
     private void UpdageAgeInfo()
     {

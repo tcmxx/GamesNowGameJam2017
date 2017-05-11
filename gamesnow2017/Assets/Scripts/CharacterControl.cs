@@ -36,12 +36,13 @@ public class CharacterControl : MonoBehaviour {
         BasicCharactor = GetComponent<CharactorMovement>();
         mainCharacter = this;
         CurrentTile = null;
+        
     }
     // Use this for initialization
     void Start()
     {
         CheckCurrentTile();
-        AkSoundEngine.SetSwitch("material", CurrentTile.wwiseSwitch, gameObject);
+        
     }
 	// Update is called once per frame
 	void Update () {
@@ -121,7 +122,11 @@ public class CharacterControl : MonoBehaviour {
 
     public void Die()
     {
-
+        MoveHorizontal(0);
+        MoveVertical(0);
+        ApplyMovement();
+        enabled = false;
+        GameController.gameController.PlayeyDieLogic();
     }
 
     public void PassLevel()
@@ -136,11 +141,13 @@ public class CharacterControl : MonoBehaviour {
     public void StartJumping()
     {
         BasicCharactor.StartJumping();
+        AkSoundEngine.PostEvent("Play_Jump", gameObject);
     }
 
     public void EndJumping()
     {
         BasicCharactor.EndJumping();
+        AkSoundEngine.PostEvent("Play_Land", gameObject);
     }
 
 

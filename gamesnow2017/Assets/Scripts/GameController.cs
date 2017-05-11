@@ -47,7 +47,8 @@ public class GameController : MonoBehaviour {
     {
         SavedAge = 0;
         CurrentLevelNum = 0;
-        SceneManager.LoadScene("Level" + CurrentLevelNum);
+        SceneTransitionHelper.Instance.StartLoadingScene("Level" + CurrentLevelNum);
+        //SceneManager.LoadScene("Level" + CurrentLevelNum);
     }
     public void StartNextLevel()
     {
@@ -55,7 +56,8 @@ public class GameController : MonoBehaviour {
         {
             SavedAge = 0;
             CurrentLevelNum++;
-            SceneManager.LoadScene("Level" + CurrentLevelNum);
+            SceneTransitionHelper.Instance.StartLoadingScene("Level" + CurrentLevelNum);
+            //SceneManager.LoadScene("Level" + CurrentLevelNum);
         }
     }
 
@@ -68,8 +70,13 @@ public class GameController : MonoBehaviour {
     public void PassLevelLogic()
     {
         CharacterControl.mainCharacter.PassLevel();
-        GamePlayUI.gamePlayUI.ShowEndGameUI();
+        GamePlayUI.gamePlayUI.ShowEndGameUI(true);
 
+    }
+
+    public void PlayeyDieLogic()
+    {
+        GamePlayUI.gamePlayUI.ShowEndGameUI(false);
     }
     
     public void ChangeCharacter(float newAge)
@@ -84,6 +91,7 @@ public class GameController : MonoBehaviour {
         newControl.BasicCharactor.CurrentVelocity = prevCharacter.BasicCharactor.CurrentVelocity;
         Destroy(prevCharacter.gameObject);
 
+        AkSoundEngine.PostEvent("Play_Player_Gets_Older", gameObject);
         Debug.Log("Character Changed");
     }
 }

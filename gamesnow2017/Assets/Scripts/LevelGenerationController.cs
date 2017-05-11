@@ -10,7 +10,7 @@ public class LevelGenerationController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         InitializeLevel();
-
+        
     }
 	
 	// Update is called once per frame
@@ -28,6 +28,7 @@ public class LevelGenerationController : MonoBehaviour {
             );
 
         Instantiate(doorPref, TilesController.tilesController.DestinationPosition + Vector3.up * 0.5f, Quaternion.identity);
+        
     }
     
 

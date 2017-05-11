@@ -17,11 +17,18 @@ public class MenuUI : MonoBehaviour {
 
     public void StartButtonClicked()
     {
+        AkSoundEngine.PostEvent("Play_Button", gameObject);
         GameController.gameController.RestartGame();
     }
 
     public void QuitButtonClicked()
     {
+        AkSoundEngine.PostEvent("Play_Button", gameObject);
         Application.Quit();
+    }
+
+    public void PlayButtonSound()
+    {
+        AkSoundEngine.PostEvent("Play_Button", gameObject);
     }
 }

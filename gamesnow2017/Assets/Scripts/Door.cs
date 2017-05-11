@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TokenDoor : TokenBasic {
+public class Door : PowerupBasic {
 
 
 
