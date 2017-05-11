@@ -700,6 +700,15 @@
 					</GroupingInfo>
 				</SwitchContainer>
 				<BlendContainer Name="Music" ID="{C93E2B69-18D4-4528-AC84-F97100493E98}" ShortID="703563351">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{C4D2B970-E1F4-492D-A18E-CBA422137B77}" ShortID="544100925">
+									<ReferenceList/>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Vorbis Auto Detect High" ID="{6F6A99BE-4FD1-49D3-89AF-54BE30CA1588}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
@@ -1122,113 +1131,113 @@
 									<CrossfadingInfo>
 										<LeftEdgePos>0</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>7.69230769230769</RightEdgePos>
+										<RightEdgePos>6.38662412855961</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
 									</CrossfadingInfo>
 								</BlendTrackAssoc>
 								<BlendTrackAssoc>
 									<ItemRef Name="2 loop" ID="{4F238236-09D8-476F-B283-08D5EA99B578}"/>
 									<CrossfadingInfo>
-										<LeftEdgePos>4.69691598723857</LeftEdgePos>
+										<LeftEdgePos>4.08247666312182</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>15.3846153846154</RightEdgePos>
+										<RightEdgePos>13.4644924967506</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
 									</CrossfadingInfo>
 								</BlendTrackAssoc>
 								<BlendTrackAssoc>
 									<ItemRef Name="3 loop" ID="{EFFBEBF5-BE26-4A5D-98EE-DCDFA2DA0535}"/>
 									<CrossfadingInfo>
-										<LeftEdgePos>12.5428335105754</LeftEdgePos>
+										<LeftEdgePos>10.7763204537398</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>23.0769230769231</RightEdgePos>
+										<RightEdgePos>17.8541888219308</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
 									</CrossfadingInfo>
 								</BlendTrackAssoc>
 								<BlendTrackAssoc>
 									<ItemRef Name="4 loop" ID="{677CE553-F8A5-407B-8ACC-135C406E6BB1}"/>
 									<CrossfadingInfo>
-										<LeftEdgePos>20.4655559494269</LeftEdgePos>
+										<LeftEdgePos>16.2412855961243</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>30.7692307692308</RightEdgePos>
+										<RightEdgePos>24.701642443578</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
 									</CrossfadingInfo>
 								</BlendTrackAssoc>
 								<BlendTrackAssoc>
 									<ItemRef Name="5 loop" ID="{4E6CE8ED-EDE4-47F8-BAB6-336A4BE56F00}"/>
 									<CrossfadingInfo>
-										<LeftEdgePos>28.2346685572492</LeftEdgePos>
+										<LeftEdgePos>22.8583244712277</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>38.4615384615385</RightEdgePos>
+										<RightEdgePos>33.085194375517</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
 									</CrossfadingInfo>
 								</BlendTrackAssoc>
 								<BlendTrackAssoc>
 									<ItemRef Name="6 loop" ID="{33F2CCCC-B4FF-4FE2-9113-71FF6424AB1D}"/>
 									<CrossfadingInfo>
-										<LeftEdgePos>35.8501713340423</LeftEdgePos>
+										<LeftEdgePos>30.7810469100792</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>46.1538461538462</RightEdgePos>
+										<RightEdgePos>41.852770885029</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
 									</CrossfadingInfo>
 								</BlendTrackAssoc>
 								<BlendTrackAssoc>
 									<ItemRef Name="7 loop" ID="{4E6E5B66-8E65-4977-8B6D-0EF4570C7347}"/>
 									<CrossfadingInfo>
-										<LeftEdgePos>43.2352593642916</LeftEdgePos>
+										<LeftEdgePos>38.9341840954744</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>53.8461538461538</RightEdgePos>
+										<RightEdgePos>49.5450785773366</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
 									</CrossfadingInfo>
 								</BlendTrackAssoc>
 								<BlendTrackAssoc>
 									<ItemRef Name="8 loop" ID="{A2FECCB5-C549-4B3C-81A3-4A0BA9EC0437}"/>
 									<CrossfadingInfo>
-										<LeftEdgePos>51.2347867186577</LeftEdgePos>
+										<LeftEdgePos>47.0105163653551</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>61.5384615384615</RightEdgePos>
+										<RightEdgePos>60.0791681436842</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
 									</CrossfadingInfo>
 								</BlendTrackAssoc>
 								<BlendTrackAssoc>
 									<ItemRef Name="9 loop" ID="{91EA32DC-C4DD-44C2-AE87-E9E84F6704D3}"/>
 									<CrossfadingInfo>
-										<LeftEdgePos>58.3894600023632</LeftEdgePos>
+										<LeftEdgePos>58.5430698333924</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>69.2307692307692</RightEdgePos>
+										<RightEdgePos>72.0725511048091</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
 									</CrossfadingInfo>
 								</BlendTrackAssoc>
 								<BlendTrackAssoc>
 									<ItemRef Name="10 loop" ID="{04C398C8-E69D-4353-8462-C09E46191A76}"/>
 									<CrossfadingInfo>
-										<LeftEdgePos>66.5425971877585</LeftEdgePos>
+										<LeftEdgePos>69.7684036393714</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>76.9230769230769</RightEdgePos>
+										<RightEdgePos>81.6081767694671</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
 									</CrossfadingInfo>
 								</BlendTrackAssoc>
 								<BlendTrackAssoc>
 									<ItemRef Name="11 loop" ID="{3F480D65-1E6A-4B63-B517-AD5F285899DE}"/>
 									<CrossfadingInfo>
-										<LeftEdgePos>74.1580999645516</LeftEdgePos>
+										<LeftEdgePos>78.6895899799126</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>84.6153846153846</RightEdgePos>
+										<RightEdgePos>89.1468746307456</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
 									</CrossfadingInfo>
 								</BlendTrackAssoc>
 								<BlendTrackAssoc>
 									<ItemRef Name="12 loop" ID="{90458B55-23A8-4C5E-A1D9-4A9F0033FED8}"/>
 									<CrossfadingInfo>
-										<LeftEdgePos>81.9272125723739</LeftEdgePos>
+										<LeftEdgePos>85.8442632636181</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>92.3076923076923</RightEdgePos>
+										<RightEdgePos>96.2247429989365</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
 									</CrossfadingInfo>
 								</BlendTrackAssoc>
 								<BlendTrackAssoc>
 									<ItemRef Name="13 loop" ID="{84C90796-3FEC-48B2-A6A2-2EEFC4F0CB52}"/>
 									<CrossfadingInfo>
-										<LeftEdgePos>89.2354956871086</LeftEdgePos>
+										<LeftEdgePos>94.3814250265863</LeftEdgePos>
 										<LeftFadingMode>Automatic</LeftFadingMode>
 										<RightEdgePos>100</RightEdgePos>
 										<RightFadingMode>Automatic</RightFadingMode>
