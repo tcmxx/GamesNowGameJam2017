@@ -702,6 +702,9 @@
 				<BlendContainer Name="Music" ID="{C93E2B69-18D4-4528-AC84-F97100493E98}" ShortID="703563351">
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-9</Value>
+							</ValueList>
 							<RTPCList>
 								<RTPC Name="" ID="{C4D2B970-E1F4-492D-A18E-CBA422137B77}" ShortID="544100925">
 									<ReferenceList/>
@@ -748,6 +751,16 @@
 						<Sound Name="2 loop" ID="{4F238236-09D8-476F-B283-08D5EA99B578}" ShortID="417630977" Type="SoundFX">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>30</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{A9A50949-E768-4EFF-B9F5-1AC10D7C9F90}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1036,10 +1049,11 @@
 														<XPos>0</XPos>
 														<YPos>100</YPos>
 														<Flags>5</Flags>
+														<SegmentShape>Log2</SegmentShape>
 													</Point>
 													<Point>
-														<XPos>1.61291</XPos>
-														<YPos>0</YPos>
+														<XPos>4.68509984639017</XPos>
+														<YPos>1</YPos>
 														<Flags>0</Flags>
 													</Point>
 													<Point>
@@ -1067,7 +1081,7 @@
 												<PointList>
 													<Point>
 														<XPos>0</XPos>
-														<YPos>0</YPos>
+														<YPos>16</YPos>
 														<Flags>5</Flags>
 													</Point>
 													<Point>

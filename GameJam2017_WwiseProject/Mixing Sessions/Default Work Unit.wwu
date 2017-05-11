@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{2AD4BD75-A1F5-4EF8-A2CE-61249F10FA1B}" SchemaVersion="75">
 	<MixingSessions>
-		<WorkUnit Name="Default Work Unit" ID="{2AD4BD75-A1F5-4EF8-A2CE-61249F10FA1B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{2AD4BD75-A1F5-4EF8-A2CE-61249F10FA1B}" PersistMode="Standalone">
+			<ChildrenList>
+				<MixingSession Name="Music &amp; SFX" ID="{BB290087-D14D-421C-9FD2-B69D5FDC3AE6}">
+					<ObjectList>
+						<ObjectRef Name="Music" ID="{C93E2B69-18D4-4528-AC84-F97100493E98}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
+						<ObjectRef Name="Footsteps" ID="{794B27D9-CF76-4BD0-9FF7-BEB9BE98385F}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
+						<ObjectRef Name="Button" ID="{22F3E9F8-9993-4999-8631-78E00911AF79}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
+						<ObjectRef Name="Jump" ID="{98709D54-7C20-452B-BC07-B9200702C564}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
+						<ObjectRef Name="Land" ID="{F35CD6C0-B27D-4021-B009-E1F011E90C60}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
+						<ObjectRef Name="Player_gets_older" ID="{4B7F684E-9076-4D3C-9161-7743CC45EE36}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
+					</ObjectList>
+				</MixingSession>
+			</ChildrenList>
+		</WorkUnit>
 	</MixingSessions>
 </WwiseDocument>
