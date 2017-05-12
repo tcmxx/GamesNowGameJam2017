@@ -83,6 +83,7 @@ public class GameController : MonoBehaviour {
         paused = true;
         CharacterControl.mainCharacter.PassLevel();
         GamePlayUI.gamePlayUI.ShowEndGameUI(true);
+        MusicController.musicController.StopMusic();
 
     }
 
