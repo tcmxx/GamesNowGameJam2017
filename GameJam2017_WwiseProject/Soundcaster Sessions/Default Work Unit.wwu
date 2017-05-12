@@ -45,11 +45,19 @@
 							<ObjectRef Name="PowerUp" ID="{3A0AE56E-CF3E-468F-9203-22CEB079DFD2}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
 							<Position X="3" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Play_Level_End" ID="{8CFF947F-80B0-4142-8925-D2F375FB8839}" WorkUnitID="{03DEE89A-7445-447A-8745-75B38247D365}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Level_End" ID="{19229D2E-6475-4967-8F06-F30514F59F9D}" WorkUnitID="{03DEE89A-7445-447A-8745-75B38247D365}"/>
+							<Position X="3" Y="2"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="lifebar" ID="{703F9145-6DA0-4B65-937C-FA044D9243B3}"/>
-							<Value>10</Value>
+							<Value>14</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>

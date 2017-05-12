@@ -23,22 +23,22 @@
 								</Element>
 							</ElementList>
 						</Action>
-						<Action Name="Stop" ID="{7F0A0D5E-52C1-46EA-AFB2-7D64334FD9CB}" ShortID="110503707" Type="Stop" Scope="One" Global="false">
+						<Action Name="Stop" ID="{7F0A0D5E-52C1-46EA-AFB2-7D64334FD9CB}" ShortID="110503707" Type="Stop" Scope="One" Global="true">
 							<PropertyList>
 								<Property Name="FadeTime" Type="Real64" Value="2"/>
 							</PropertyList>
 							<ElementList>
-								<Element ID="{C54DB0E4-FD34-40DE-857C-54FDEE03403F}" Global="false">
+								<Element ID="{C54DB0E4-FD34-40DE-857C-54FDEE03403F}" Global="true">
 									<ObjectRef Name="Level End" ID="{A9E472BE-EA2A-44E4-BF84-DFA9EDF2AF78}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
 								</Element>
 							</ElementList>
 						</Action>
-						<Action Name="Stop" ID="{3E9702A7-5F94-497B-9929-2DF32801E3A2}" ShortID="1036354146" Type="Stop" Scope="One" Global="false">
+						<Action Name="Stop" ID="{3E9702A7-5F94-497B-9929-2DF32801E3A2}" ShortID="1036354146" Type="Stop" Scope="One" Global="true">
 							<PropertyList>
 								<Property Name="FadeTime" Type="Real64" Value="3"/>
 							</PropertyList>
 							<ElementList>
-								<Element ID="{8A3CF5E4-6BF1-44E4-A019-E6DD3AD28DEC}" Global="false">
+								<Element ID="{8A3CF5E4-6BF1-44E4-A019-E6DD3AD28DEC}" Global="true">
 									<ObjectRef Name="Menu_music" ID="{E05BDCE9-DBCA-46B1-8440-FD5F75C89317}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
 								</Element>
 							</ElementList>
@@ -47,12 +47,12 @@
 				</Event>
 				<Event Name="Stop_Music" ID="{CC4E36FD-7000-4F00-8128-CA0263DF0017}">
 					<ChildrenList>
-						<Action Name="Stop" ID="{6135BD53-C39D-4BA8-AEA7-7824556B9155}" ShortID="710575591" Type="Stop" Scope="One" Global="false">
+						<Action Name="Stop" ID="{6135BD53-C39D-4BA8-AEA7-7824556B9155}" ShortID="710575591" Type="Stop" Scope="One" Global="true">
 							<PropertyList>
 								<Property Name="FadeTime" Type="Real64" Value="2"/>
 							</PropertyList>
 							<ElementList>
-								<Element ID="{63C2FC58-B203-4418-B169-861CB4AF8E94}" Global="false">
+								<Element ID="{63C2FC58-B203-4418-B169-861CB4AF8E94}" Global="true">
 									<ObjectRef Name="Music" ID="{C93E2B69-18D4-4528-AC84-F97100493E98}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
 								</Element>
 							</ElementList>
@@ -137,13 +137,41 @@
 				</Event>
 				<Event Name="Stop_Menu_Music" ID="{D27E1B93-192C-4B00-A047-9C11167E53BC}">
 					<ChildrenList>
-						<Action Name="Stop" ID="{46D7AE2E-0D94-42EE-8BE3-0918E877323A}" ShortID="111383556" Type="Stop" Scope="One" Global="false">
+						<Action Name="Stop" ID="{46D7AE2E-0D94-42EE-8BE3-0918E877323A}" ShortID="111383556" Type="Stop" Scope="One" Global="true">
 							<PropertyList>
 								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ElementList>
-								<Element ID="{9C82521D-6D91-4FCC-BA72-9595E3A70398}" Global="false">
+								<Element ID="{9C82521D-6D91-4FCC-BA72-9595E3A70398}" Global="true">
 									<ObjectRef Name="Menu_music" ID="{E05BDCE9-DBCA-46B1-8440-FD5F75C89317}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Level_End" ID="{19229D2E-6475-4967-8F06-F30514F59F9D}">
+					<ChildrenList>
+						<Action Name="Stop" ID="{B4D5A507-6DA7-46AD-B1C0-B9453D613DA3}" ShortID="518973193" Type="Stop" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{6CB992D9-4DA1-444B-90CF-2655934D24BE}" Global="false">
+									<ObjectRef Name="Level End" ID="{A9E472BE-EA2A-44E4-BF84-DFA9EDF2AF78}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Level_End" ID="{8CFF947F-80B0-4142-8925-D2F375FB8839}">
+					<ChildrenList>
+						<Action Name="Play" ID="{132D7D08-157D-49E9-8EE5-D78F195CFBD0}" ShortID="751602342" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{B05DAD41-49E4-496C-9E88-26D536B6377A}" Global="false">
+									<ObjectRef Name="Level End" ID="{A9E472BE-EA2A-44E4-BF84-DFA9EDF2AF78}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
 								</Element>
 							</ElementList>
 						</Action>
