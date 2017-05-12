@@ -38,6 +38,7 @@ public class GameController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        Cursor.visible = false;
 	}
 	
 	// Update is called once per frame
@@ -78,6 +79,7 @@ public class GameController : MonoBehaviour {
     public void PlayeyDieLogic()
     {
         GamePlayUI.gamePlayUI.ShowEndGameUI(false);
+
     }
     
     public void ChangeCharacter(float newAge)

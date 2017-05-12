@@ -10,7 +10,7 @@ public class LevelGenerationData : MonoBehaviour {
     public struct PrefWithData
     {
         public GameObject pref;
-        public float data;   
+        public float data;
     }
 
     public int sizeWidth = 8;       //size of the scene.
@@ -21,7 +21,14 @@ public class LevelGenerationData : MonoBehaviour {
     //tiles
     public PrefWithData[] tileItems;
 
-    public PrefWithData[] powerupItems;
+    [System.Serializable]
+    public struct PrefWithNumberRange
+    {
+        public GameObject pref;
+        public int minNumber;
+        public int maxNumber;
+    }
+    public PrefWithNumberRange[] powerupItems;
 
     private void Awake()
     {

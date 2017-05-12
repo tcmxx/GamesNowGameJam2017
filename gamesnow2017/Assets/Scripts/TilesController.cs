@@ -16,6 +16,8 @@ public class TilesController : MonoBehaviour {
 
     public Vector3 CharactorStartPosition { get; set; }
     public Vector3 DestinationPosition { get; set; }
+    public List<BasicTile> CanStandOnTiles { get; private set; }
+
 
     private void Awake()
     {
@@ -36,8 +38,9 @@ public class TilesController : MonoBehaviour {
     public void GenerateTilesData(LevelGenerationData parameters)
     {
         currentGenerationData = parameters;
-        //create the 2d arrays
+        //create the containers
         tilesArray = new BasicTile[currentGenerationData.sizeWidth, currentGenerationData.sizeLength];
+        CanStandOnTiles = new List<BasicTile>();
         //generate a guarranteed path
         GeneratePossiblePath(currentGenerationData);
 
@@ -60,11 +63,13 @@ public class TilesController : MonoBehaviour {
 
                 if (tilesArray[i, j].canStandOn)
                 {
-                    RandomInstantiatePowerUp(currentGenerationData.GridToWorldPosition(i, j) + Vector3.up*0.35f);
+                    CanStandOnTiles.Add(tilesArray[i, j]);
                 }
             }
         }
 
+        //generate the powerups
+        InstantiatePowerupsOnStandableTiles();
 
         //add invisiblewalls
         for (int i = 0; i <= 1; ++i)
@@ -177,21 +182,26 @@ public class TilesController : MonoBehaviour {
         return  tilesArray[width, height];
     }
 
-    private GameObject RandomInstantiatePowerUp(Vector3 position)
+    private void InstantiatePowerupsOnStandableTiles()
     {
-        GameObject result = null;
-        float num = Random.Range(0, 1.0f);
-        float currentChance = 0;
-        foreach (var i in currentGenerationData.powerupItems)
+        List<BasicTile> copiedList = new List<BasicTile>();
+        copiedList.AddRange(CanStandOnTiles);
+
+        foreach (var pu in currentGenerationData.powerupItems)
         {
-            currentChance += i.data;
-            if (currentChance >= num)
+            int num = Random.Range(pu.minNumber, pu.maxNumber + 1);
+            for(int i = 0; i < num; ++i)
             {
-                result = Instantiate(i.pref, position, Quaternion.identity, this.transform);
-                break;
+                int index = Random.Range(0, copiedList.Count);
+                BasicTile tile = copiedList[index];
+                Instantiate(pu.pref, tile.transform.position + Vector3.up * 0.5f, Quaternion.identity, transform);
+                copiedList.RemoveAt(index);
+                if(copiedList.Count <= 0)
+                {
+                    return;
+                }
             }
         }
-        return result;
     }
     
 }

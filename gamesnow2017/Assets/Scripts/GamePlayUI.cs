@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.EventSystems;
 
 public class GamePlayUI : MonoBehaviour {
 
@@ -13,7 +13,9 @@ public class GamePlayUI : MonoBehaviour {
     public Text ageText;
     public GameObject passGameUI;
     public GameObject loseGameUI;
-    public GameObject continueButton;
+    public Button continueButton;
+    public Button restartButton;
+    public Button passGameQuitButton;
     public Image powerup1Image;
     public Image powerup2Image;
     public Sprite noPowerupSprite;
@@ -54,15 +56,18 @@ public class GamePlayUI : MonoBehaviour {
             passGameUI.SetActive(true);
             if (!GameController.gameController.HasNextScene())
             {
-                continueButton.SetActive(false);
+                continueButton.gameObject.SetActive(false);
+                passGameQuitButton.Select();
             }
             else
             {
-                continueButton.SetActive(true);
+                continueButton.gameObject.SetActive(true);
+                continueButton.Select();
             }
         }else
         {
             loseGameUI.SetActive(true);
+            restartButton.Select();
         }
     }
 
