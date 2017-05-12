@@ -24,7 +24,7 @@
 				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music"/>
 				<Event Id="4126063088" Name="Play_Player_Gets_Older" ObjectPath="\Events\Default Work Unit\Play_Player_Gets_Older"/>
 				<Event Id="2876792902" Name="Play_PowerUp" ObjectPath="\Events\Default Work Unit\Play_PowerUp"/>
-				<Event Id="3945748993" Name="Stop_Menu_music" ObjectPath="\Events\Default Work Unit\Stop_Menu_music"/>
+				<Event Id="3945748993" Name="Stop_Menu_Music" ObjectPath="\Events\Default Work Unit\Stop_Menu_Music"/>
 				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Stop_Music"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
