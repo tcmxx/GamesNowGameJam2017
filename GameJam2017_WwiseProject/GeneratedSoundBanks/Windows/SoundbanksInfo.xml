@@ -108,6 +108,10 @@
 					<ShortName>SFX_FS_Sand_06.wav</ShortName>
 					<Path>SFX\SFX_FS_Sand_06_E95633E1.wem</Path>
 				</File>
+				<File Id="241486587" Language="SFX">
+					<ShortName>1 loop.wav</ShortName>
+					<Path>SFX\1 loop_4B8CC0C5.wem</Path>
+				</File>
 				<File Id="245981826" Language="SFX">
 					<ShortName>SFX_FS_Concrete_03.wav</ShortName>
 					<Path>SFX\SFX_FS_Concrete_03_E95633E1.wem</Path>

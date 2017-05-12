@@ -1994,6 +1994,45 @@
 						</BlendTrack>
 					</BlendTrackList>
 				</BlendContainer>
+				<BlendContainer Name="Level End" ID="{A9E472BE-EA2A-44E4-BF84-DFA9EDF2AF78}" ShortID="672770794">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CD2FE121-6371-4CDF-9CFD-615721B33951}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{99D7376A-645A-4B66-9BF9-F5656A8907FB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="1 loop" ID="{15BF6E44-1D53-4C39-9759-0BA00C28B065}" ShortID="366229931" Type="SoundFX">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-18</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CD2FE121-6371-4CDF-9CFD-615721B33951}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{99D7376A-645A-4B66-9BF9-F5656A8907FB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="1 loop" ID="{8EB10162-B54F-41BE-B4A9-9423F36F6E3C}" ShortID="241486587">
+									<Language>SFX</Language>
+									<AudioFile>1 loop.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="1 loop" ID="{8EB10162-B54F-41BE-B4A9-9423F36F6E3C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</BlendContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
