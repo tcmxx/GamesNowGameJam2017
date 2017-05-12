@@ -63,8 +63,8 @@ public class GamePlayUI : MonoBehaviour {
             passGameUI.SetActive(true);
             float time = GameController.gameController.LevelCostTime;
             float age = CharacterControl.mainCharacter.CurrentAge;
-            passGameTime.text = "Time: " + time;
-            passGameAge.text = "Final Age: " + age;
+            passGameTime.text = "Time: " + time.ToString("F1");
+            passGameAge.text = "Final Age: " + age.ToString("F0");
             passGameTitle.text = "Your Life " + (GameController.gameController.CurrentLevelNum + 1).ToString() + " was happy";
             if (!GameController.gameController.HasNextScene())
             {

@@ -129,7 +129,7 @@ public class CharacterControl : MonoBehaviour {
     {
         MoveHorizontal(0);
         MoveVertical(0);
-        ApplyMovement();
+        BasicCharactor.Move(Vector3.up, 0);
         enabled = false;
         GetComponent<PlayerInput>().enabled = false;
         GameController.gameController.PlayeyDieLogic();
@@ -139,7 +139,7 @@ public class CharacterControl : MonoBehaviour {
     {
         MoveHorizontal(0);
         MoveVertical(0);
-        ApplyMovement();
+        BasicCharactor.Move(Vector3.up, 0);
         enabled = false;
         GetComponent<PlayerInput>().enabled = false;
     }

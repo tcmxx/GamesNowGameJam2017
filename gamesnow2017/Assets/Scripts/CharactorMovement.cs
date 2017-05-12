@@ -63,6 +63,7 @@ public class CharactorMovement : MonoBehaviour {
         if (desiredVelocity.magnitude <= 0.01f)
         {
             desiredSpeedTangent = CurrentVelocity.normalized;
+            desiredVelocity = Vector3.zero;
         }
         float speedTangent = Vector3.Dot(CurrentVelocity, desiredSpeedTangent);
         float speedTangentDiff = speedTangent - desiredVelocity.magnitude;
@@ -103,15 +104,30 @@ public class CharactorMovement : MonoBehaviour {
         if (desiredVelocity.magnitude <= 0.01f)
         {
             desiredSpeedTangent = CurrentVelocity.normalized;
+            desiredVelocity = Vector3.zero;
         }
         speedTangent = Vector3.Dot(CurrentVelocity, desiredSpeedTangent);
         speedTangentDiff = speedTangent - desiredVelocity.magnitude;
         vNormal = CurrentVelocity - speedTangent * desiredSpeedTangent;
 
-        speedTangentDiff += Time.fixedDeltaTime * acceleration * (speedTangentDiff > 0 ? -1 : 1);
+
+        bool speedDiffPos = speedTangentDiff > 0;
+        speedTangentDiff += Time.fixedDeltaTime * acceleration * (speedDiffPos ? -1 : 1);
+        if(speedDiffPos && speedTangentDiff <= 0)
+        {
+            speedTangentDiff = 0;
+        }else if (!speedDiffPos && speedTangentDiff >= 0)
+        {
+            speedTangentDiff = 0;
+        }
+
         CurrentVelocity = vNormal + desiredVelocity + speedTangentDiff * desiredSpeedTangent;
 
         //assign the rigidbody velocity
+        if(CurrentVelocity.magnitude <= 0.01f)
+        {
+            CurrentVelocity = Vector3.zero;
+        }
         characterController.SimpleMove(CurrentVelocity);
         //Debug.Log(CurrentVelocity);
         //update the direction
