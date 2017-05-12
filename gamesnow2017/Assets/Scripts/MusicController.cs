@@ -25,11 +25,13 @@ public class MusicController : MonoBehaviour {
     private void OnDisable()
     {
         StopMusic();
+        AkSoundEngine.PostEvent("Stop_Level_End", gameObject); 
     }
 
     public void StopMusic()
     {
         AkSoundEngine.PostEvent("Stop_Music", gameObject);
         AkSoundEngine.PostEvent("Stop_Menu_music", gameObject);
+        
     }
 }
