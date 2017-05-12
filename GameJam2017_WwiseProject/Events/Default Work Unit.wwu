@@ -28,6 +28,9 @@
 				<Event Name="Stop_Music" ID="{CC4E36FD-7000-4F00-8128-CA0263DF0017}">
 					<ChildrenList>
 						<Action Name="Stop" ID="{6135BD53-C39D-4BA8-AEA7-7824556B9155}" ShortID="710575591" Type="Stop" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{63C2FC58-B203-4418-B169-861CB4AF8E94}" Global="false">
 									<ObjectRef Name="Music" ID="{C93E2B69-18D4-4528-AC84-F97100493E98}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
@@ -102,7 +105,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Stop_Menu_music" ID="{D27E1B93-192C-4B00-A047-9C11167E53BC}">
+				<Event Name="Stop_Menu_Music" ID="{D27E1B93-192C-4B00-A047-9C11167E53BC}">
 					<ChildrenList>
 						<Action Name="Stop" ID="{46D7AE2E-0D94-42EE-8BE3-0918E877323A}" ShortID="111383556" Type="Stop" Scope="One" Global="false">
 							<ElementList>
