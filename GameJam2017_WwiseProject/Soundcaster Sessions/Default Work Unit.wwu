@@ -38,6 +38,10 @@
 							<Position X="2" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Stop_Menu_Music" ID="{D27E1B93-192C-4B00-A047-9C11167E53BC}" WorkUnitID="{03DEE89A-7445-447A-8745-75B38247D365}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="PowerUp" ID="{3A0AE56E-CF3E-468F-9203-22CEB079DFD2}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
 							<Position X="3" Y="0"/>
 						</Module>
@@ -45,7 +49,7 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="lifebar" ID="{703F9145-6DA0-4B65-937C-FA044D9243B3}"/>
-							<Value>6</Value>
+							<Value>10</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
