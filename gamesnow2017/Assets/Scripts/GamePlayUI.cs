@@ -19,6 +19,12 @@ public class GamePlayUI : MonoBehaviour {
     public Image powerup1Image;
     public Image powerup2Image;
     public Sprite noPowerupSprite;
+    public Text passGameTitle;
+    public Text passGameTime;
+    public Text passGameAge;
+    public Text passGameRating;
+    public GameObject spaceBarIcon;
+    public Text lifeNumberIndicator;
     [Header("Paramters")]
     public float maxAgeBar = 100f;
 
@@ -39,8 +45,9 @@ public class GamePlayUI : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
-	}
+        lifeNumberIndicator.text = "Life " + GameController.gameController.CurrentLevelNum + 1;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -54,6 +61,11 @@ public class GamePlayUI : MonoBehaviour {
         if (pass)
         {
             passGameUI.SetActive(true);
+            float time = GameController.gameController.LevelCostTime;
+            float age = CharacterControl.mainCharacter.CurrentAge;
+            passGameTime.text = "Time: " + time;
+            passGameAge.text = "Final Age: " + age;
+            passGameTitle.text = "Your Life " + (GameController.gameController.CurrentLevelNum + 1).ToString() + " was happy";
             if (!GameController.gameController.HasNextScene())
             {
                 continueButton.gameObject.SetActive(false);
@@ -118,9 +130,14 @@ public class GamePlayUI : MonoBehaviour {
         if(powerup1 != null)
         {
             powerup1Image.sprite = powerup1.powerUpImage;
-        }else
+            //if(GameController.gameController.CurrentLevelNum == 0)
+            spaceBarIcon.SetActive(true);
+        }
+        else
         {
             powerup1Image.sprite = noPowerupSprite;
+            //if (GameController.gameController.CurrentLevelNum == 0)
+            spaceBarIcon.SetActive(false);
         }
 
         if(powerup2 != null)

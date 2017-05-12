@@ -194,7 +194,7 @@ public class TilesController : MonoBehaviour {
             {
                 int index = Random.Range(0, copiedList.Count);
                 BasicTile tile = copiedList[index];
-                Instantiate(pu.pref, tile.transform.position + Vector3.up * 0.5f, Quaternion.identity, transform);
+                Instantiate(pu.pref, tile.transform.position + Vector3.up * 0.3f, Quaternion.identity, transform);
                 copiedList.RemoveAt(index);
                 if(copiedList.Count <= 0)
                 {

@@ -8,11 +8,14 @@ public class GameController : MonoBehaviour {
 
     public static GameController gameController;
 
-    
+
 
 
     public float SavedAge { get { return savedAge; } set { savedAge = value; } }
     private float savedAge = 0;
+
+    public float LevelCostTime { get; private set; }
+    private bool paused = true;
 
     public int CurrentLevelNum { get; private set; }
 
@@ -43,21 +46,27 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if(!paused)
+            LevelCostTime += Time.deltaTime;
+    }
 
 
-    public void RestartGame()
+    public void RestartGame(bool fromBeginning = false)
     {
         SavedAge = 0;
-        CurrentLevelNum = 0;
+        LevelCostTime = 0;
+        paused = false;
+        if (fromBeginning)
+            CurrentLevelNum = 0;
         SceneTransitionHelper.Instance.StartLoadingScene("Level" + CurrentLevelNum);
     }
     public void StartNextLevel()
     {
         if (HasNextScene())
         {
+            paused = false;
             SavedAge = 0;
+            LevelCostTime = 0;
             CurrentLevelNum++;
             SceneTransitionHelper.Instance.StartLoadingScene("Level" + CurrentLevelNum);
         }
@@ -71,6 +80,7 @@ public class GameController : MonoBehaviour {
 
     public void PassLevelLogic()
     {
+        paused = true;
         CharacterControl.mainCharacter.PassLevel();
         GamePlayUI.gamePlayUI.ShowEndGameUI(true);
 
