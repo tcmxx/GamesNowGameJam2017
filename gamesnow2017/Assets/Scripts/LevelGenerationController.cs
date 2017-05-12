@@ -24,7 +24,7 @@ public class LevelGenerationController : MonoBehaviour {
 
         //create the character 
         Instantiate(CharacterPresets.characterPresets.GetCharacterPref(GameController.gameController.SavedAge),
-            TilesController.tilesController.CharactorStartPosition + Vector3.up*1,Quaternion.identity
+            TilesController.tilesController.CharactorStartPosition + Vector3.up*2,Quaternion.identity
             );
 
         Instantiate(doorPref, TilesController.tilesController.DestinationPosition + Vector3.up * 0.5f, Quaternion.identity);

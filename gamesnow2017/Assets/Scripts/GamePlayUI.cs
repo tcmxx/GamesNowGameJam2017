@@ -53,6 +53,16 @@ public class GamePlayUI : MonoBehaviour {
 	void Update () {
         UpdageAgeInfo();
         ChangeIconsColor(CharacterControl.mainCharacter.CurrentStage);
+        if (Input.GetButtonDown("Exit"))
+        {
+            CharacterControl.mainCharacter.Die();
+        }
+
+        if (EventSystem.current.currentSelectedGameObject == null)
+        {
+            Debug.Log("Reselecting first input");
+            EventSystem.current.SetSelectedGameObject(EventSystem.current.firstSelectedGameObject);
+        }
     }
 
 
