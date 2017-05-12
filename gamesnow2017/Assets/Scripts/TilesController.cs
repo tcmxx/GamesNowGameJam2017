@@ -78,7 +78,7 @@ public class TilesController : MonoBehaviour {
             {
                 Vector3 pos = Vector3.right * (currentGenerationData.tileWidth * (i * (currentGenerationData.sizeWidth + 1) - 0.5f)) +
                     Vector3.forward * (currentGenerationData.tileLength * (j + 0.5f));
-                GameObject newTile = GameObject.Instantiate(invisibleWallPref, pos, Quaternion.identity, this.transform);
+                GameObject.Instantiate(invisibleWallPref, pos, Quaternion.identity, this.transform);
             }
         }
         for (int i = 0; i < currentGenerationData.sizeWidth; ++i)
@@ -87,7 +87,7 @@ public class TilesController : MonoBehaviour {
             {
                 Vector3 pos = Vector3.right * (currentGenerationData.tileWidth * (i + 0.5f)) +
                     Vector3.forward * (currentGenerationData.tileLength * (j * (currentGenerationData.sizeLength + 1) - 0.5f));
-                GameObject newTile = GameObject.Instantiate(invisibleWallPref, pos, Quaternion.identity, this.transform);
+                GameObject.Instantiate(invisibleWallPref, pos, Quaternion.identity, this.transform);
             }
         }
         

@@ -14,7 +14,8 @@ public class MusicController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         AkSoundEngine.PostEvent("Play_Music", gameObject);
-	}
+        AkSoundEngine.PostEvent("Play_Menu_Music", gameObject);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -24,5 +25,6 @@ public class MusicController : MonoBehaviour {
     private void OnDisable()
     {
         AkSoundEngine.PostEvent("Stop_Music", gameObject);
+        AkSoundEngine.PostEvent("Stop_Menu_music", gameObject);
     }
 }
