@@ -1,10 +1,12 @@
 Event	ID	Name			Wwise Object Path	Notes
 	2099555730	Play_Button			\Default Work Unit\Play_Button	
+	2228153899	Play_Menu_Music			\Default Work Unit\Play_Menu_Music	
 	2837384057	Stop_Music			\Default Work Unit\Stop_Music	
 	2876792902	Play_PowerUp			\Default Work Unit\Play_PowerUp	
 	2932040671	Play_Music			\Default Work Unit\Play_Music	
 	3689126666	Play_Jump			\Default Work Unit\Play_Jump	
 	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
+	3945748993	Stop_Menu_music			\Default Work Unit\Stop_Menu_music	
 	4126063088	Play_Player_Gets_Older			\Default Work Unit\Play_Player_Gets_Older	
 	4285282925	Play_Land			\Default Work Unit\Play_Land	
 

@@ -6,6 +6,10 @@
 				<SoundcasterSession Name="music &amp; movement" ID="{87EB06A1-F2D6-4047-A19F-B40863AE7D0A}">
 					<ModuleList>
 						<Module>
+							<ObjectRef Name="Menu_music" ID="{E05BDCE9-DBCA-46B1-8440-FD5F75C89317}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Play_Music" ID="{9ABA7F68-38A0-4C8B-8BC3-F9896C1298A7}" WorkUnitID="{03DEE89A-7445-447A-8745-75B38247D365}"/>
 							<Position X="0" Y="1"/>
 						</Module>
@@ -25,11 +29,19 @@
 							<ObjectRef Name="Play_Land" ID="{A143AB89-AFC9-425A-94F2-68607A4CC3D2}" WorkUnitID="{03DEE89A-7445-447A-8745-75B38247D365}"/>
 							<Position X="2" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Button" ID="{22F3E9F8-9993-4999-8631-78E00911AF79}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PowerUp" ID="{3A0AE56E-CF3E-468F-9203-22CEB079DFD2}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
+							<Position X="3" Y="0"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="lifebar" ID="{703F9145-6DA0-4B65-937C-FA044D9243B3}"/>
-							<Value>88.0184331797235</Value>
+							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>

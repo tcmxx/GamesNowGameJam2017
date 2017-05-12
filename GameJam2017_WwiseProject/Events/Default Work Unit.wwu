@@ -91,6 +91,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Menu_Music" ID="{3E15F4A5-01EB-4DBE-A034-D852114B4A08}">
+					<ChildrenList>
+						<Action Name="Play" ID="{6F887B88-10DC-41EC-9E94-A7E81C3DD96E}" ShortID="597997245" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{3BAC2EAC-1F85-4387-A187-5936813E2824}" Global="false">
+									<ObjectRef Name="Menu_music" ID="{E05BDCE9-DBCA-46B1-8440-FD5F75C89317}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Menu_music" ID="{D27E1B93-192C-4B00-A047-9C11167E53BC}">
+					<ChildrenList>
+						<Action Name="Stop" ID="{46D7AE2E-0D94-42EE-8BE3-0918E877323A}" ShortID="111383556" Type="Stop" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{9C82521D-6D91-4FCC-BA72-9595E3A70398}" Global="false">
+									<ObjectRef Name="Menu_music" ID="{E05BDCE9-DBCA-46B1-8440-FD5F75C89317}" WorkUnitID="{1EDF8C84-EDAF-4E9E-B68F-4BE9E5B44DED}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
