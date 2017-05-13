@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="75">
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="2827178890" DateHigh="30591168"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Actor-Mixer Hierarchy\Music.wwu" DateLow="737240368" DateHigh="30591167"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Actor-Mixer Hierarchy\SFX.wwu" DateLow="447472278" DateHigh="30591585"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="178925791" DateHigh="30591167"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="178850879" DateHigh="30591167"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="178880763" DateHigh="30591167"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="178820729" DateHigh="30591167"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Conversion Settings\Factory Conversion Settings.wwu" DateLow="2589071766" DateHigh="30573139"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="178965820" DateHigh="30591167"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Effects\Default Work Unit.wwu" DateLow="179121064" DateHigh="30591167"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Effects\Factory Convolution Reverb Effects.wwu" DateLow="2934549316" DateHigh="30573139"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Effects\Factory Effects.wwu" DateLow="3622766887" DateHigh="30591572"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Events\Default Work Unit.wwu" DateLow="3088897228" DateHigh="30591546"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1678802867" DateHigh="30591439"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\GameJam2017_WwiseProject.Niko.wsettings" DateLow="448269493" DateHigh="30591585"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\GameJam2017_WwiseProject.wproj" DateLow="1529369961" DateHigh="30591173"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="179210998" DateHigh="30591167"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1330391065" DateHigh="30591541"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="2200439299" DateHigh="30591536"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="178905769" DateHigh="30591167"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Presets\Default Work Unit.wwu" DateLow="179040868" DateHigh="30591167"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Queries\Default Work Unit.wwu" DateLow="179190984" DateHigh="30591167"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Queries\Factory Queries.wwu" DateLow="2588911739" DateHigh="30573139"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="3757320940" DateHigh="30591546"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1042204195" DateHigh="30591546"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\States\Default Work Unit.wwu" DateLow="179085892" DateHigh="30591167"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Switches\Default Work Unit.wwu" DateLow="924908502" DateHigh="30591180"/>
-	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="179251154" DateHigh="30591167"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="605290779" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Actor-Mixer Hierarchy\Music.wwu" DateLow="605235737" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Actor-Mixer Hierarchy\SFX.wwu" DateLow="605500933" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="604575306" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="605140662" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="605205713" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="605350829" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Conversion Settings\Factory Conversion Settings.wwu" DateLow="605456020" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="604630303" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Effects\Default Work Unit.wwu" DateLow="605426000" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Effects\Factory Convolution Reverb Effects.wwu" DateLow="604805434" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Effects\Factory Effects.wwu" DateLow="604920531" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Events\Default Work Unit.wwu" DateLow="605521063" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="605325798" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\GameJam2017_WwiseProject.Niko.wsettings" DateLow="611118156" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\GameJam2017_WwiseProject.wproj" DateLow="604325090" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="605105642" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="605400850" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="604445208" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="605175706" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Presets\Default Work Unit.wwu" DateLow="604955538" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Queries\Default Work Unit.wwu" DateLow="605030607" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Queries\Factory Queries.wwu" DateLow="605075619" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="605541081" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="604995563" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\States\Default Work Unit.wwu" DateLow="605265756" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Switches\Default Work Unit.wwu" DateLow="605380844" DateHigh="30591951"/>
+	<ValidationCacheItem File="C:\Users\user\Documents\GitHub\GamesNowGameJam2017\GameJam2017_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="604510243" DateHigh="30591951"/>
 </ValidationCache>
